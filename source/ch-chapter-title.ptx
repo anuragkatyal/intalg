@@ -9,13 +9,4 @@
 
   <!-- include sections -->
   <xi:include href="sec-section-name1.ptx" />
-  
-  <title>Linear InEquations</title>
-
-  <introduction>
-    <p> Text before the first section. </p>
-  </introduction>
-
-  <!-- include sections -->
-  <xi:include href="sec-section-name2.ptx" />  
 </chapter>
