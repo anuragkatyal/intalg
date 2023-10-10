@@ -100,13 +100,76 @@ var ptx_lunr_docs = [
   "body": " Introduction to Inequalities  asdgsd  "
 },
 {
+  "id": "sec-2_2",
+  "level": "1",
+  "url": "sec-2_2.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Inequalities in One Variable",
+  "body": " Inequalities in One Variable  asdgsd  "
+},
+{
+  "id": "sec-2_3",
+  "level": "1",
+  "url": "sec-2_3.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Inequalities in Two Variables",
+  "body": " Inequalities in Two Variables  asdgsd  "
+},
+{
+  "id": "sec-2_1",
+  "level": "1",
+  "url": "sec-2_1.html",
+  "type": "Section",
+  "number": "2.4",
+  "title": "Systems of Linear Inequalities",
+  "body": " Systems of Linear Inequalities  asdgsd  "
+},
+{
   "id": "sec-3_1",
   "level": "1",
   "url": "sec-3_1.html",
   "type": "Section",
   "number": "3.1",
-  "title": "Introduction to Inequalities",
-  "body": " Introduction to Inequalities  asdgsd  "
+  "title": "Properties of Exponents",
+  "body": " Properties of Exponents  asdgsd  "
+},
+{
+  "id": "sec-3_2",
+  "level": "1",
+  "url": "sec-3_2.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Introduction to Polynomials",
+  "body": " Introduction to Polynomials  asdgsd  "
+},
+{
+  "id": "sec-3_3",
+  "level": "1",
+  "url": "sec-3_3.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Addition and Subtraction of Polynomials",
+  "body": " Addition and Subtraction of Polynomials  asdgsd  "
+},
+{
+  "id": "sec-3_4",
+  "level": "1",
+  "url": "sec-3_4.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Multiplication of Polynomials",
+  "body": " Multiplication of Polynomials  asdgsd  "
+},
+{
+  "id": "sec-3_5",
+  "level": "1",
+  "url": "sec-3_5.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Special Product Formulas",
+  "body": " Special Product Formulas  asdgsd  "
 },
 {
   "id": "sec-4_1",
@@ -114,8 +177,44 @@ var ptx_lunr_docs = [
   "url": "sec-4_1.html",
   "type": "Section",
   "number": "4.1",
-  "title": "Introduction to Inequalities",
-  "body": " Introduction to Inequalities  asdgsd  "
+  "title": "Greatest Common Factor",
+  "body": " Greatest Common Factor  asdgsd  "
+},
+{
+  "id": "sec-4_2",
+  "level": "1",
+  "url": "sec-4_2.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Grouping",
+  "body": " Grouping  asdgsd  "
+},
+{
+  "id": "sec-4_3",
+  "level": "1",
+  "url": "sec-4_3.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "AC Method",
+  "body": " AC Method  asdgsd  "
+},
+{
+  "id": "sec-4_4",
+  "level": "1",
+  "url": "sec-4_4.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "STM Method",
+  "body": " STM Method  asdgsd  "
+},
+{
+  "id": "sec-4_5",
+  "level": "1",
+  "url": "sec-4_5.html",
+  "type": "Section",
+  "number": "4.5",
+  "title": "Solving Equations by Factoring",
+  "body": " Solving Equations by Factoring  asdgsd  "
 },
 {
   "id": "sec-5_1",
@@ -123,8 +222,71 @@ var ptx_lunr_docs = [
   "url": "sec-5_1.html",
   "type": "Section",
   "number": "5.1",
-  "title": "Introduction to Inequalities",
-  "body": " Introduction to Inequalities  asdgsd  "
+  "title": "Multiplying and Dividing Rational Expressions",
+  "body": " Multiplying and Dividing Rational Expressions  asdgsd  "
+},
+{
+  "id": "sec-5_2",
+  "level": "1",
+  "url": "sec-5_2.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Adding and Subtracting Rational Expressions",
+  "body": " Adding and Subtracting Rational Expressions  asdgsd  "
+},
+{
+  "id": "sec-5_3",
+  "level": "1",
+  "url": "sec-5_3.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Solving Rational Equations",
+  "body": " Solving Rational Equations  asdgsd  "
+},
+{
+  "id": "sec-6_1",
+  "level": "1",
+  "url": "sec-6_1.html",
+  "type": "Section",
+  "number": "6.1",
+  "title": "Introduction to Radicals",
+  "body": " Introduction to Radicals  asdgsd  "
+},
+{
+  "id": "sec-6_2",
+  "level": "1",
+  "url": "sec-6_2.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "Adding and Subtracting Radicals",
+  "body": " Adding and Subtracting Radicals  asdgsd  "
+},
+{
+  "id": "sec-6_3",
+  "level": "1",
+  "url": "sec-6_3.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Multiplying Radicals",
+  "body": " Multiplying Radicals  asdgsd  "
+},
+{
+  "id": "sec-6_4",
+  "level": "1",
+  "url": "sec-6_4.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Dividing Radicals",
+  "body": " Dividing Radicals  asdgsd  "
+},
+{
+  "id": "sec-6_5",
+  "level": "1",
+  "url": "sec-6_5.html",
+  "type": "Section",
+  "number": "6.5",
+  "title": "Solving Radical Equations",
+  "body": " Solving Radical Equations  asdgsd  "
 }
 ]
 
