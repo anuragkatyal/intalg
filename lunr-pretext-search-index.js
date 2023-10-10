@@ -196,7 +196,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "AC Method",
-  "body": " AC Method   What's the point?  We start our discussion of factoring quadratics using the AC Method by reviewing multiplication of polynomials. We discussed it in Section 3.4.     Let's Generalize  Instead of using specific constants, what if we considered multiplying two general binomials.     Intuition for the Technique  Here's an example of a problem that can be solved using the AC Method.      "
+  "body": " AC Method   What's the point?  We start our discussion of factoring quadratics using the AC Method by reviewing multiplication of polynomials. We discussed it in Section 3.4.     Let's Generalize  Instead of using specific constants, what if we considered multiplying two general binomials.     Intuition for the Technique  Here's an example of a problem that can be solved using the AC Method.       "
 },
 {
   "id": "sec-4_4",
