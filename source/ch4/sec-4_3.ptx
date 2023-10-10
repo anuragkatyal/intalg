@@ -7,10 +7,19 @@
     <p>We start our discussion of factoring quadratics using the AC Method by reviewing multiplication of polynomials. We discussed it in Section 3.4.</p>
     <interactive iframe="https://slides.com/whyoverhow/acmq/fullscreen" width="100%"/>
   </subsection>
-  <p>Let's generalize the above motivating question</p>
-  <interactive iframe="https://slides.com/whyoverhow/acgen/fullscreen" width="100%"/>
-  <p>Here's an example.</p>
-  <interactive iframe="https://slides.com/whyoverhow/acex1/fullscreen" width="100%"/>
+
+  <subsection xml:id="subsec-acgen">
+    <title>Let's Generalize</title>
+    <p>Instead of using specific constants, what if we considered multiplying two general binomials.</p>
+    <interactive iframe="https://slides.com/whyoverhow/acgen/fullscreen" width="100%"/>
+  </subsection>
+  
+  <subsection xml:id="subsec-acex1">
+    <title>Intuition for the Technique</title>
+    <p>Here's an example of a problem that can be solved using the AC Method.</p>
+    <interactive iframe="https://slides.com/whyoverhow/acex1/fullscreen" width="100%"/>
+  </subsection>
+  
   <video youtube="UdvTR0_1INo"/>
   <interactive iframe="https://www.doenet.org/portfolioviewer/_qQEBY5lbbvF4idCWwkLbr" width="100%"/>
   
