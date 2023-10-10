@@ -4,6 +4,7 @@
   <title>Slope</title>
 
   <video youtube="UdvTR0_1INo"/>
-  <iframe src="https://slides.com/whyoverhow/code-6569aa/embed?byline=hidden" width="576" height="420" title="Points and Lines" scrolling="no" frameborder="0"></iframe>
-
+  <interactive>
+    <iFrame src="https://slides.com/whyoverhow/code-6569aa/embed?byline=hidden" width="576" height="420" title="Points and Lines"></iFrame>
+  </interactive>
 </section>
