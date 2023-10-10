@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-5" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Linear Inequalities</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-5.1.ptx" />
+</chapter>
