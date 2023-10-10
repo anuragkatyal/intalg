@@ -12,7 +12,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./chapters/ch-chapter-1.ptx" />
+    <xi:include href="./ch1/ch-chapter-1.ptx" />
     <xi:include href="./ch-chapter-2.ptx" />
 
 
