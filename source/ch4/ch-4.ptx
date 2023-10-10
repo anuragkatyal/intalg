@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-4" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Rational Expressions and Equations</title>
+  <title>Factoring Polynomials</title>
 
   <introduction>
     <p> Text before the first section. </p>
@@ -9,4 +9,8 @@
 
   <!-- include sections -->
   <xi:include href="sec-4_1.ptx" />
+  <xi:include href="sec-4_2.ptx" />
+  <xi:include href="sec-4_3.ptx" />
+  <xi:include href="sec-4_4.ptx" />
+  <xi:include href="sec-4_5.ptx" />
 </chapter>
