@@ -52,7 +52,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "Slope",
-  "body": " Slope   "
+  "body": " Slope     "
 },
 {
   "id": "sec-1_7",
