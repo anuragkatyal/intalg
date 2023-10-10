@@ -8,9 +8,9 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-5_1.ptx" />
-  <xi:include href="sec-5_2.ptx" />
-  <xi:include href="sec-5_3.ptx" />
-  <xi:include href="sec-5_4.ptx" />
-  <xi:include href="sec-5_5.ptx" />
+  <xi:include href="sec-6_1.ptx" />
+  <xi:include href="sec-6_2.ptx" />
+  <xi:include href="sec-6_3.ptx" />
+  <xi:include href="sec-6_4.ptx" />
+  <xi:include href="sec-6_5.ptx" />
 </chapter>
