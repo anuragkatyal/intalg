@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-chapter1" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Linear Equations</title>
 
   <introduction>
@@ -10,9 +10,6 @@
   <!-- include sections -->
   <xi:include href="sec-section-name1.ptx" />
   
-</chapter>
-
-<chapter xml:id="ch-chapter2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Linear InEquations</title>
 
   <introduction>
@@ -20,6 +17,5 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name2.ptx" />
-  
+  <xi:include href="sec-section-name2.ptx" />  
 </chapter>
