@@ -9,7 +9,7 @@
     <subtitle>An Interactive Approach.</subtitle>
 
     <!-- Include frontmatter -->
-    <xi:include href="./frontmatter.ptx" />
+    <!-- <xi:include href="./frontmatter.ptx" /> -->
 
     <!-- Include chapters -->
     <xi:include href="./ch1/ch-1.ptx" />
@@ -19,7 +19,7 @@
     <xi:include href="./ch5/ch-5.ptx" />
 
     <!-- Include backmatter -->
-    <xi:include href="./backmatter.ptx" />
+    <!-- <xi:include href="./backmatter.ptx" /> -->
 
   </book>
 </pretext>
