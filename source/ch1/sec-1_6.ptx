@@ -2,14 +2,4 @@
 
 <section xml:id="sec-1_6" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Slope</title>
-  
-  <p>What's the point?</p>
-  <interactive iframe="https://slides.com/whyoverhow/acmq/fullscreen" width="100%"/>
-  <p>Let's generalize the above motivating question</p>
-  <interactive iframe="https://slides.com/whyoverhow/acgen/fullscreen" width="100%"/>
-  <p>Here's an example.</p>
-  <interactive iframe="https://slides.com/whyoverhow/acex1/fullscreen" width="100%"/>
-  <video youtube="UdvTR0_1INo"/>
-  <interactive iframe="https://www.doenet.org/portfolioviewer/_qQEBY5lbbvF4idCWwkLbr" width="100%"/>
-  
 </section>
