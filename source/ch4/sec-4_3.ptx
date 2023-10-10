@@ -17,7 +17,7 @@
   <subsection xml:id="subsec-acex1">
     <title>Intuition for the Technique</title>
     <p>Here's an example of a problem that can be solved using the AC Method.</p>
-    <interactive iframe="https://slides.com/whyoverhow/acex1/fullscreen" width="100%"/>
+    <interactive iframe="https://slides.com/whyoverhow/acexample1/fullscreen" width="100%"/>
   </subsection>
   
   <video youtube="UdvTR0_1INo"/>
