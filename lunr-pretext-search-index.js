@@ -52,7 +52,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "Slope",
-  "body": " Slope     "
+  "body": " Slope  What's the point?   Let's generalize the above motivating question   Here's an example.     "
 },
 {
   "id": "sec-1_7",
