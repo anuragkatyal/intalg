@@ -6,18 +6,30 @@
     <title>What's the point?</title>
     <p>We start our discussion of factoring quadratics using the AC Method by reviewing multiplication of polynomials. We discussed it in Section 3.4.</p>
     <interactive iframe="https://slides.com/whyoverhow/acmq/fullscreen" width="100%"/>
+    <hint component="video">
+      <title>Video explanation</title>
+      <video width="98%" youtube="dPwglBUoBU4" component="video"/>
+    </hint>
   </subsection>
 
   <subsection xml:id="subsec-acgen">
     <title>Let's Generalize</title>
     <p>Instead of using specific constants, what if we considered multiplying two general binomials.</p>
     <interactive iframe="https://slides.com/whyoverhow/acgen/fullscreen" width="100%"/>
+    <hint component="video">
+      <title>Video explanation</title>
+      <video width="98%" youtube="vOYR_CbCjpM" component="video"/>
+    </hint>
   </subsection>
   
   <subsection xml:id="subsec-acex1">
     <title>Intuition for the Technique</title>
     <p>Here's an example of a problem that can be solved using the AC Method.</p>
     <interactive iframe="https://slides.com/whyoverhow/acexample1/fullscreen" width="100%"/>
+    <hint component="video">
+      <title>Video explanation</title>
+      <video width="98%" youtube="-dnDgvuU7-0" component="video"/>
+    </hint>
   </subsection>
   
   <video youtube="UdvTR0_1INo"/>
