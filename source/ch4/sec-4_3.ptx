@@ -32,7 +32,16 @@
     </hint>
   </subsection>
   
-  <interactive iframe="https://www.doenet.org/portfolioviewer/_SSLIyXsYPewvuYXvJEqyB" width="100%"/>
+  <subsection xml:id="subsec-acselfquiz">
+    <title>Self Quiz</title>
+      <interactive iframe="https://itempool.com/anurag/c/5o0edLPKM-F" width="100%"/>
+  </subsection>
+
+  <subsection xml:id="subsec-acpp">
+    <title>Practice Problems</title>
+      <interactive iframe="https://www.doenet.org/portfolioviewer/_SSLIyXsYPewvuYXvJEqyB" width="100%"/>
+  </subsection>
+  
   
 
 </section>
