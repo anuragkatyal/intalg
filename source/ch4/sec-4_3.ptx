@@ -21,6 +21,8 @@
       <video width="98%" youtube="vOYR_CbCjpM" component="video"/>
     </hint>
   </subsection>
+
+  <xi:include parse="text" src="path/to/example.doenetml"/>
   
   <subsection xml:id="subsec-acex1">
     <title>Intuition for the Technique</title>
