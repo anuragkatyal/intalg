@@ -15,8 +15,10 @@
   <subsection xml:id="subsec-acgen">
     <title>Let's Generalize</title>
     <p>Instead of using specific constants, what if we considered multiplying two general binomials.</p>
-    <interactive iframe="https://slides.com/whyoverhow/acgen/fullscreen" width="100%"/>
     
+    
+    <!-- <interactive iframe="https://slides.com/whyoverhow/acgen/fullscreen" width="100%"/> -->
+    <interactive iframe="./testslide.html" width="100%"/>
     <hint component="video">
       <title>Video explanation</title>
       <video width="98%" youtube="vOYR_CbCjpM" component="video"/>
