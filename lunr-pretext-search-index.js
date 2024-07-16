@@ -118,9 +118,9 @@ var ptx_lunr_docs = [
   "body": " Inequalities in Two Variables  asdgsd  "
 },
 {
-  "id": "sec-2_1",
+  "id": "sec-2_4",
   "level": "1",
-  "url": "sec-2_1.html",
+  "url": "sec-2_4.html",
   "type": "Section",
   "number": "2.4",
   "title": "Systems of Linear Inequalities",
@@ -196,7 +196,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "AC Method",
-  "body": " AC Method   What's the point?  We start our discussion of factoring quadratics using the AC Method by reviewing multiplication of polynomials. We discussed it in Section 3.4.    Video explanation      Let's Generalize  Instead of using specific constants, what if we considered multiplying two general binomials.    Video explanation      Intuition for the Technique  Here's an example of a problem that can be solved using the AC Method.    Video explanation      Self Quiz   Download a print version of the self quiz with answers by    Practice Problems    "
+  "body": " AC Method   What's the point?  We start our discussion of factoring quadratics using the AC Method by reviewing multiplication of polynomials. We discussed it in Section 3.4.    Video explanation      Let's Generalize  Instead of using specific constants, what if we considered multiplying two general binomials.    Video explanation     DoenetML example      Intuition for the Technique  Here's an example of a problem that can be solved using the AC Method.    Video explanation      Self Quiz   Download a print version of the self quiz with answers by    Practice Problems    "
+},
+{
+  "id": "figure-doenetml",
+  "level": "2",
+  "url": "sec-4_3.html#figure-doenetml",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": " DoenetML example   "
 },
 {
   "id": "sec-4_4",
