@@ -16,14 +16,28 @@
     <title>Let's Generalize</title>
     <p>Instead of using specific constants, what if we considered multiplying two general binomials.</p>
     <interactive iframe="https://slides.com/whyoverhow/acgen/fullscreen" width="100%"/>
+    
     <hint component="video">
       <title>Video explanation</title>
       <video width="98%" youtube="vOYR_CbCjpM" component="video"/>
     </hint>
-  </subsection>
-
-  <xi:include parse="text" src="path/to/example.doenetml"/>
   
+
+  
+
+  <figure xml:id="figure-doenetml">
+    <caption>DoenetML example</caption>
+    <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
+    <slate surface="doenetml">
+    <xi:include parse="text" href="./4_3rq1.doenetml" />
+    </slate>
+    </interactive>
+    </figure>
+  </subsection>
+  
+  
+
+
   <subsection xml:id="subsec-acex1">
     <title>Intuition for the Technique</title>
     <p>Here's an example of a problem that can be solved using the AC Method.</p>
