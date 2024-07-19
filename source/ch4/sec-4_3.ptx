@@ -78,9 +78,6 @@ $uPlusV
       <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
       <slate surface="doenetml">
       <xi:include parse="text" href="./4_3rq1.ptx" />
-
-      
-
       </slate>
       </interactive>
       </figure>

@@ -1,4 +1,4 @@
-
+<activity>
 <setup>
   <select name="a">
     <option selectWeight="5"><math>1</math></option>
