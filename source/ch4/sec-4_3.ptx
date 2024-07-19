@@ -11,11 +11,76 @@
       <video width="98%" youtube="dPwglBUoBU4" component="video"/>
     </hint>
 
-    <figure xml:id="figure-doenetml">
+    
+    <!-- <figure xml:id="figure-doenetml">
+      <caption>DoenetML example</caption>
+
+
+      <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
+<slate surface="doenetml">
+&lt;p&gt;
+Adjust the vectors &lt;m&gt;\vec u&lt;/m&gt;, &lt;m&gt;\vec v&lt;/m&gt;, and &lt;m&gt;\vec w&lt;/m&gt; in the
+left graph to visualize the areas calculated by
+&lt;m&gt;\det[\vec u\hspace{0.5em}\vec w]&lt;/m&gt;, &lt;m&gt;\det[\vec v\hspace{0.5em}\vec w]&lt;/m&gt;,
+and
+&lt;m&gt;\det[\vec u+\vec v\hspace{0.5em}\vec w]&lt;/m&gt;.
+&lt;/p&gt;
+&lt;setup&gt;&lt;line through="(0,0) $v" name="vLine"/&gt;&lt;math simplify  name="c"&gt;$cv.x/$v.x&lt;/math&gt;&lt;/setup&gt;
+&lt;sideBySide&gt;
+&lt;graph xmin="-4" ymin="-4" xmax="16" ymax="16"&gt;
+&lt;m draggable="false" anchor="(10,14)"&gt;
+\det[\vec u\hspace{0.5em}\vec w],
+\det[\vec v\hspace{0.5em}\vec w]
+&lt;/m&gt;
+&lt;point name="u" styleNumber="3"&gt;
+(6,2)
+&lt;label&gt;&lt;m&gt;\vec u&lt;/m&gt;&lt;/label&gt;
+&lt;/point&gt;
+&lt;point name="w" styleNumber="3"&gt;
+(3,7)
+&lt;label&gt;&lt;m&gt;\vec w&lt;/m&gt;&lt;/label&gt;
+&lt;/point&gt;
+&lt;point name="uPlusV" styleNumber="4"&gt;
+(9,5)
+&lt;label&gt;&lt;m&gt;\vec v&lt;/m&gt;&lt;/label&gt;
+&lt;/point&gt;
+&lt;polygon vertices="(0,0) $u $u+$w $w" filled draggable="false" styleNumber="3"/&gt;
+&lt;polygon vertices="$u $uPlusV $uPlusV+$w $u+$w" filled draggable="false" styleNumber="4"/&gt;
+&lt;lineSegment endpoints="(0,0) $uPlusV" styleNumber="6"/&gt;
+&lt;lineSegment endpoints="$w $uPlusV+$w" styleNumber="6"/&gt;
+&lt;/graph&gt;
+&lt;graph xmin="-4" ymin="-4" xmax="16" ymax="16"&gt;
+&lt;m draggable="false" anchor="(12,14)"&gt;
+\det[\vec u+\vec v\hspace{0.5em}\vec w]
+&lt;/m&gt;
+&lt;polygon vertices="(0,0) $uPlusV $uPlusV+$w $w" filled draggable="false" styleNumber="2"/&gt;
+&lt;point draggable="false" styleNumber="3"&gt;
+$w
+&lt;label&gt;&lt;m&gt;\vec w&lt;/m&gt;&lt;/label&gt;
+&lt;/point&gt;
+&lt;point draggable="false" styleNumber="4"&gt;
+$uPlusV
+&lt;label&gt;&lt;m&gt;\vec u+\vec v&lt;/m&gt;&lt;/label&gt;
+&lt;/point&gt;
+&lt;lineSegment endpoints="(0,0) $u" styleNumber="6"/&gt;
+&lt;lineSegment endpoints="$u $uPlusV" styleNumber="6"/&gt;
+&lt;lineSegment endpoints="$w $w+$u" styleNumber="6"/&gt;
+&lt;lineSegment endpoints="$w+$u $w+$uPlusV" styleNumber="6"/&gt;
+&lt;/graph&gt;
+&lt;/sideBySide&gt;
+</slate>
+      </interactive>
+    </figure> -->
+
       
+    <figure>
+      <caption>This is dumb</caption>
       <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
       <slate surface="doenetml">
-      <xi:include parse="text" href="./4_3rq1.doenetml" />
+      <xi:include parse="text" href="./4_3rq1.ptx" />
+
+      
+
       </slate>
       </interactive>
       </figure>
@@ -55,7 +120,8 @@
       
       <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
       <slate surface="doenetml">
-      <xi:include parse="text" href="./4_3rq2.doenetml" />
+        <xi:include parse="text" src="./4_3rq2.doenet"/>
+      <!-- <xi:include parse="text" href="./4_3rq2.doenet" /> -->
       </slate>
       </interactive>
       </figure>

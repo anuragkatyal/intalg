@@ -1,0 +1,45 @@
+<!-- **********************************************************************
+
+Course:    Intermediate Algebra/Algebra I
+Chapter:   Factoring Polynomials
+Section:   Factoring polynomials using the AC Method
+Author:    Anurag Katyal, Fall 2023
+Contact:   anurag@whyoverhow.com
+
+I'd love feedback on the activity or suggestions for improving the activity. 
+
+About the activity: An activity on practicing the use of properties of exponents.
+
+Problems are modified or taken from Beginning and Intermediate Algebra by Tyler Wallace - http://www.wallace.ccfaculty.org/book/6.3%20Trinomials%20a=1%20Practice.pdf.
+
+********************************************************************** -->
+
+<section><title>Practice Problems</title>
+  <p>Factor the following polynomials using the AC Method. You may need to factor out the GCF first. If you cannot factor using the AC Method or it does not apply enter, the polynomial itself. </p>
+
+  <sideBySide widths="40% 40%" margins="5%">
+    <section><title>Problem 1</title><m>p^2+17 p+72=</m><answer>(p+9)(p+8)</answer></section>
+    <section><title>Problem 2</title><m>x^2+x-72=</m><answer>(x-8)(x+9)</answer></section>
+  </sideBySide>
+  
+  <sideBySide widths="40% 40%" margins="5%">
+    <section><title>Problem 3</title><m>n^2-9 n+8=</m><answer>(n-8)(n-1)</answer></section>
+    <section><title>Problem 4</title><m>x^2+x-30=</m><answer>(x-5)(x+6)</answer></section>
+  </sideBySide>
+  
+  <sideBySide widths="40% 40%" margins="5%">    
+    <section><title>Problem 5</title><m>x^2+6x+1=</m><answer>x^2+6x+1</answer></section>
+    <section><title>Problem 6</title><m>x^2-9 x-10=</m><answer>(x+1)(x-10)</answer></section>
+  </sideBySide>
+  
+  <sideBySide widths="40% 40%" margins="5%">    
+    <section><title>Problem 7</title><m>x^2+13 x+40=</m><answer>(x+5)(x+8)</answer></section>
+    <section><title>Problem 8</title><m>m^2-15 m n+50 n^2=</m><answer>(m-5 n)(m-10 n)</answer></section>
+  </sideBySide>
+
+  <sideBySide widths="40% 40%" margins="5%">    
+    <section><title>Problem 9</title><m>x^2+14 x y+45 y^2=</m><answer>(x+5 y)(x+9 y)</answer></section>
+    <section><title>Problem 10</title><m>5 m^2+30 m n-90 n^2=</m><answer>5\left(m^2+6 m n-18 n^2\right)</answer></section>
+  </sideBySide>
+
+</section>

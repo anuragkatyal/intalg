@@ -1,5 +1,5 @@
-<activity>
-<title>KenKen Puzzle (3x3) #1</title>
+
+
   
 <setup>
   <numberList name="sols">3 2 1 2 1 3 1 3 2</numberList>
@@ -48,4 +48,3 @@
 
 <answer name="check"><award><when>$sols = $ans</when></award></answer>
 
-</activity>
