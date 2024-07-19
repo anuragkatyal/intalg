@@ -10,6 +10,15 @@
       <title>Video explanation</title>
       <video width="98%" youtube="dPwglBUoBU4" component="video"/>
     </hint>
+
+    <figure xml:id="figure-doenetml">
+      <caption>DoenetML example</caption>
+      <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
+      <slate surface="doenetml">
+      <xi:include parse="text" href="./4_3rq1.doenetml" />
+      </slate>
+      </interactive>
+      </figure>
   </subsection>
 
   <subsection xml:id="subsec-acgen">
@@ -27,14 +36,7 @@
 
   
 
-  <figure xml:id="figure-doenetml">
-    <caption>DoenetML example</caption>
-    <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
-    <slate surface="doenetml">
-    <xi:include parse="text" href="./4_3rq1.doenetml" />
-    </slate>
-    </interactive>
-    </figure>
+  
   </subsection>
   
   
@@ -48,13 +50,18 @@
       <title>Video explanation</title>
       <video width="98%" youtube="-dnDgvuU7-0" component="video"/>
     </hint>
+
+    <figure xml:id="figure-doenetml">
+      <caption>DoenetML example</caption>
+      <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
+      <slate surface="doenetml">
+      <xi:include parse="text" href="./4_3rq2.doenetml" />
+      </slate>
+      </interactive>
+      </figure>
   </subsection>
   
-  <subsection xml:id="subsec-acselfquiz">
-    <title>Self Quiz</title>
-      <interactive iframe="https://itempool.com/anurag/c/5o0edLPKM-F" width="100%"/>
-      <p>Download a print version of the self quiz with answers by <url href="https://drive.google.com/file/d/1C4XB8oHY0B3VY1u2o0rlmGCEUf-YXsZE/view?usp=share_link" visual="clicking here."/></p>
-  </subsection>
+  
 
   <subsection xml:id="subsec-acpp">
     <title>Practice Problems</title>
