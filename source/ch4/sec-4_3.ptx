@@ -120,7 +120,7 @@ $uPlusV
       
       <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
       <slate surface="doenetml">
-        <xi:include parse="text" src="./4_3rq2.doenet"/>
+        <xi:include parse="text" href="./4_3rq2.doenet"/>
       <!-- <xi:include parse="text" href="./4_3rq2.doenet" /> -->
       </slate>
       </interactive>
@@ -132,7 +132,7 @@ $uPlusV
   <subsection xml:id="subsec-acpp">
       <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
       <slate surface="doenetml">
-        <xi:include parse="text" src="./4_3pq.doenet"/>
+        <xi:include parse="text" href="./4_3pq.doenet"/>
       <!-- <xi:include parse="text" href="./4_3rq2.doenet" /> -->
       </slate>
       </interactive>

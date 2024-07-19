@@ -1,5 +1,5 @@
 
-<section><title>Practice Problems</title>
+<title>Practice Problems</title>
   <p>Factor the following polynomials using the AC Method. You may need to factor out the GCF first. If you cannot factor using the AC Method or it does not apply enter, the polynomial itself. </p>
 
   <sideBySide widths="40% 40%" margins="5%">
@@ -27,4 +27,3 @@
     <section><title>Problem 10</title><m>5 m^2+30 m n-90 n^2=</m><answer>5\left(m^2+6 m n-18 n^2\right)</answer></section>
   </sideBySide>
 
-</section>
