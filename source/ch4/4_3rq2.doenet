@@ -1,20 +1,4 @@
 
-
-
-
-
-
-<activity>
-
-<!--************************************************************
-Author: University of Minnesota PreCalculus Dept.
-Reviewed/Remixed by: Doenet team
-
-About the problem: Factor a quadratic trinomial. Graphical tool provided for visualization of the geometry of the problem. The quadratic term coefficient, a, ranges from 1 to 5, with 1 being most heavily weighted for selection. The "a" can always be factored out of the entire trinomial expression to obtain a quadratic with a coefficient of 1. 
-The "Worked Example" can be hidden from view by commenting out the <hint> portion of the document.
-*************************************************************-->
-
-
 <setup>
   <select name="a">
     <option selectWeight="5"><math>1</math></option>

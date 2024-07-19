@@ -130,8 +130,13 @@ $uPlusV
   
 
   <subsection xml:id="subsec-acpp">
-    <title>Practice Problems</title>
-      <interactive iframe="https://www.doenet.org/portfolioviewer/_SSLIyXsYPewvuYXvJEqyB" width="100%"/>
+      <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
+      <slate surface="doenetml">
+        <xi:include parse="text" src="./4_3pq.doenet"/>
+      <!-- <xi:include parse="text" href="./4_3rq2.doenet" /> -->
+      </slate>
+      </interactive>
+      
   </subsection>
   
   
