@@ -12,7 +12,7 @@
     </hint>
 
     <figure xml:id="figure-doenetml">
-      <caption>DoenetML example</caption>
+      
       <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
       <slate surface="doenetml">
       <xi:include parse="text" href="./4_3rq1.doenetml" />
@@ -51,8 +51,8 @@
       <video width="98%" youtube="-dnDgvuU7-0" component="video"/>
     </hint>
 
-    <figure xml:id="figure-doenetml">
-      <caption>DoenetML example</caption>
+    <figure xml:id="figure-doenetml2">
+      
       <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
       <slate surface="doenetml">
       <xi:include parse="text" href="./4_3rq2.doenetml" />
