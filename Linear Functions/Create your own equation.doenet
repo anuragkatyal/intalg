@@ -1,0 +1,176 @@
+<!-- 
+
+Course:    Intermediate Algebra
+Chapter:   #. Linear Functions
+Section:   #. 
+Author:    Anurag Katyal, Spring 2025
+Contact:   anurag@whyoverhow.com 
+
+About the activity:
+
+-->
+
+<setup>
+  
+  <selectFromSequence name="sol" from="-10" to="10" numToSelect="5"></selectFromSequence>
+  <function name="f">$p1a x + $p1b - $p1c</function>
+  <boolean name="p1aInt"><isInteger>$p1a</isInteger></boolean>
+  <boolean name="p1bInt"><isInteger>$p1b</isInteger></boolean>
+  <boolean name="p1cInt"><isInteger>$p1c</isInteger></boolean>
+
+  <function name="g">$p2a x - $p2b - $p2c</function>
+  <boolean name="p2aInt"><isInteger>$p2a</isInteger></boolean>
+  <boolean name="p2bInt"><isInteger>$p2b</isInteger></boolean>
+  <boolean name="p2cInt"><isInteger>$p2c</isInteger></boolean>
+
+  <function name="h">-$p3a x + $p3b + $p3c</function>
+  <boolean name="p3aInt"><isInteger>$p3a</isInteger></boolean>
+  <boolean name="p3bInt"><isInteger>$p3b</isInteger></boolean>
+  <boolean name="p3cInt"><isInteger>$p3c</isInteger></boolean>
+
+  <function name="i">$p4a x - $p4b + $p4c</function>
+  <boolean name="p4aInt"><isInteger>$p4a</isInteger></boolean>
+  <boolean name="p4bInt"><isInteger>$p4b</isInteger></boolean>
+  <boolean name="p4cInt"><isInteger>$p4c</isInteger></boolean>  
+
+  <function name="j">$p5a(x + $p5b) - $p5c - $p5d</function>
+  <boolean name="p5aInt"><isInteger>$p5a</isInteger></boolean>
+  <boolean name="p5bInt"><isInteger>$p5b</isInteger></boolean>
+  <boolean name="p5cInt"><isInteger>$p5c</isInteger></boolean>  
+  <boolean name="p5dInt"><isInteger>$p5d</isInteger></boolean>  
+  
+</setup>
+
+<title>Create your own equation!</title>
+
+<p>For all the problems below, <m>a</m>, <m>b</m>, and <m>c</m> must all be integers besides <m>-1</m>, <m>0</m> or <m>1</m>.</p>
+
+<section boxed><title>Problem 1: <m>ax + b = c</m></title>
+
+<p>Create an equation of the form, <m>ax + b = c</m>, which has a solution of <m>x=$sol[1]</m>.</p>
+
+  <p><mathInput name="p1a" minWidth="25"><label>a=</label></mathInput>, <mathInput name="p1b" minWidth="25"><label>b=</label></mathInput>, <mathInput name="p1c" minWidth="25"><label>c=</label></mathInput></p>
+
+  <p>Your equation: <math simplify="numberspreserveorder">$p1a x+$p1b=$p1c</math>.</p>
+  <answer name="p1">
+    <award>
+      <when>
+        $$f($sol[1])=0 and 
+        $p1a!=0 and $p1a!=-1 and $p1a!=1 and
+        $p1b!=0 and $p1b!=-1 and $p1b!=1 and 
+        $p1c!=0 and $p1c!=-1 and $p1c!=1 and 
+        <isInteger>$p1a</isInteger> and <isInteger>$p1b</isInteger> and <isInteger>$p1c</isInteger>
+      </when>
+    </award>
+    </answer>  
+
+  <feedback condition="($p1aInt=false or $p1bInt=false or $p1cInt=false) and $p1.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> and <m>c</m> must all be integers. </feedback>
+  <feedback condition="($p1a = 0 or $p1a = 1 or $p1a = -1 or $p1b = 0 or $p1b = 1 or $p1b = -1 or $p1c = 0 or $p1c = 1 or $p1c = -1) and $p1.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> or <m>c</m> cannot be <m>-1</m>, <m>0</m> or <m>1</m>!</feedback>
+
+</section>
+
+<section boxed><title>Problem 2: <m>ax - b = c</m></title>
+
+<p>Create an equation of the form, <m>ax - b = c</m>, which has a solution of <m>x=$sol[2]</m>. Do <em>not</em> use any of the values <m>a</m>, <m>b</m> or <m>c</m> used previously.</p>
+
+  <p><mathInput name="p2a" minWidth="25"><label>a=</label></mathInput>, <mathInput name="p2b" minWidth="25"><label>b=</label></mathInput>, <mathInput name="p2c" minWidth="25"><label>c=</label></mathInput></p>
+
+  <p>Your equation: <math simplify="numberspreserveorder">$p2a x-$p2b=$p2c</math>.</p>
+  <answer name="p2">
+    <award>
+      <when>
+        $$g($sol[2])=0 and 
+        $p2a!=0 and $p2a!=-1 and $p2a!=1 and
+        $p2b!=0 and $p2b!=-1 and $p2b!=1 and 
+        $p2c!=0 and $p2c!=-1 and $p2c!=1 and 
+        <isInteger>$p2a</isInteger> and <isInteger>$p2b</isInteger> and <isInteger>$p2c</isInteger> and
+        $p2a!=$p1a and $p2b!=$p1b and $p2c!=$p1c
+      </when>
+    </award>
+    </answer>  
+  <feedback condition="$p2a=$p1a or $p2b=$p1b or $p2c=$p1c">Remember <em>not</em> use any of the values <m>a</m>,<m>b</m> or <m>c</m> used previously.</feedback>
+  <feedback condition="($p2aInt=false or $p2bInt=false or $p2cInt=false) and $p2.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> and <m>c</m> must all be integers. </feedback>
+  <feedback condition="($p2a = 0 or $p2a = 1 or $p2a = -1 or $p2b = 0 or $p2b = 1 or $p2b = -1 or $p2c = 0 or $p2c = 1 or $p2c = -1) and $p2.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> or <m>c</m> cannot be <m>-1</m>, <m>0</m> or <m>1</m>!</feedback>
+
+</section>
+
+<section boxed><title>Problem 3: <m>-ax + b = -c</m></title>
+
+<p>Create an equation of the form, <m>-ax + b = -c</m>, which has a solution of <m>x=$sol[3]</m>. Do <em>not</em> use any of the values <m>a</m>, <m>b</m> or <m>c</m> used previously.</p>
+
+  <p><mathInput name="p3a" minWidth="25"><label>a=</label></mathInput>, <mathInput name="p3b" minWidth="25"><label>b=</label></mathInput>, <mathInput name="p3c" minWidth="25"><label>c=</label></mathInput></p>
+
+  <p>Your equation: <math simplify="numberspreserveorder">-$p3a x+$p3b=-$p3c</math>.</p>
+  <answer name="p3">
+    <award>
+      <when>
+        $$h($sol[3])=0 and 
+        $p3a!=0 and $p3a!=-1 and $p3a!=1 and
+        $p3b!=0 and $p3b!=-1 and $p3b!=1 and 
+        $p3c!=0 and $p3c!=-1 and $p3c!=1 and 
+        <isInteger>$p3a</isInteger> and <isInteger>$p3b</isInteger> and <isInteger>$p3c</isInteger> and
+        $p3a!=$p1a and $p3b!=$p1b and $p3c!=$p1c and
+        $p3a!=$p2a and $p3b!=$p2b and $p3c!=$p2c
+      </when>
+    </award>
+    </answer>  
+  <feedback condition="$p3a=$p1a or $p3b=$p1b or $p3c=$p1c or $p3a=$p2a or $p3b=$p2b or $p3c=$p2c">Remember <em>not</em> use any of the values <m>a</m>,<m>b</m> or <m>c</m> used previously.</feedback>
+  <feedback condition="($p3aInt=false or $p3bInt=false or $p3cInt=false) and $p3.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> and <m>c</m> must all be integers. </feedback>
+  <feedback condition="($p3a = 0 or $p3a = 1 or $p3a = -1 or $p3b = 0 or $p3b = 1 or $p3b = -1 or $p3c = 0 or $p3c = 1 or $p3c = -1) and $p3.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> or <m>c</m> cannot be <m>-1</m>, <m>0</m> or <m>1</m>!</feedback>
+  
+</section>
+
+<section boxed><title>Problem 4: <m>ax - b = -c</m></title>
+
+<p>Create an equation of the form, <m>ax - b = -c</m>, which has a solution of <m>x=$sol[4]</m>. Do <em>not</em> use any of the values <m>a</m>, <m>b</m> or <m>c</m> used previously.</p>
+
+  <p><mathInput name="p4a" minWidth="25"><label>a=</label></mathInput>, <mathInput name="p4b" minWidth="25"><label>b=</label></mathInput>, <mathInput name="p4c" minWidth="25"><label>c=</label></mathInput></p>
+
+  <p>Your equation: <math simplify="numberspreserveorder">$p4a x-$p4b=-$p4c</math>.</p>
+  <answer name="p4">
+    <award>
+      <when>
+        $$i($sol[4])=0 and 
+        $p4a!=0 and $p4a!=-1 and $p4a!=1 and
+        $p4b!=0 and $p4b!=-1 and $p4b!=1 and 
+        $p4c!=0 and $p4c!=-1 and $p4c!=1 and 
+        <isInteger>$p4a</isInteger> and <isInteger>$p4b</isInteger> and <isInteger>$p4c</isInteger> and
+        $p4a!=$p1a and $p4b!=$p1b and $p4c!=$p1c and
+        $p4a!=$p2a and $p4b!=$p2b and $p4c!=$p2c and
+        $p4a!=$p3a and $p4b!=$p3b and $p4c!=$p3c
+      </when>
+    </award>
+    </answer>  
+  <feedback condition="$p4a=$p1a or $p4b=$p1b or $p4c=$p1c or $p4a=$p2a or $p4b=$p2b or $p4c=$p2c or $p4a=$p3a or $p4b=$p3b or $p4c=$p3c">Remember <em>not</em> use any of the values <m>a</m>, <m>b</m> or <m>c</m> used previously.</feedback>
+  <feedback condition="($p4aInt=false or $p4bInt=false or $p4cInt=false) and $p4.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> and <m>c</m> must all be integers. </feedback>
+  <feedback condition="($p4a = 0 or $p4a = 1 or $p4a = -1 or $p4b = 0 or $p4b = 1 or $p4b = -1 or $p4c = 0 or $p4c = 1 or $p4c = -1) and $p4.responseHasBeenSubmitted=true">Remember that <m>a</m>,<m>b</m> or <m>c</m> cannot be <m>-1</m>, <m>0</m> or <m>1</m>!</feedback>
+
+</section>
+
+<section boxed><title>Problem 5: <m>a(x + b) -c = d</m></title>
+
+<p>Create an equation of the form, <m>a(x + b) -c = d</m>, which has a solution of <m>x=$sol[5]</m>. Do <em>not</em> use any of the values <m>a</m>, <m>b</m> or <m>c</m> used previously.</p>
+
+  <p><mathInput name="p5a" minWidth="25"><label>a=</label></mathInput>, <mathInput name="p5b" minWidth="25"><label>b=</label></mathInput>, <mathInput name="p5c" minWidth="25"><label>c=</label></mathInput>, <mathInput name="p5d" minWidth="25"><label>d=</label></mathInput></p>
+
+  <p>Your equation: <math simplify="numberspreserveorder">$p5a(x+$p5b)-$p5c=$p5d</math>.</p>
+  <answer name="p5">
+    <award>
+      <when>
+        $$j($sol[5])=0 and 
+        $p5a!=0 and $p5a!=-1 and $p5a!=1 and
+        $p5b!=0 and $p5b!=-1 and $p5b!=1 and 
+        $p5c!=0 and $p5c!=-1 and $p5c!=1 and 
+        <isInteger>$p5a</isInteger> and <isInteger>$p5b</isInteger> and <isInteger>$p5c</isInteger> and
+        $p5a!=$p1a and $p5b!=$p1b and $p5c!=$p1c and
+        $p5a!=$p2a and $p5b!=$p2b and $p5c!=$p2c and
+        $p5a!=$p3a and $p5b!=$p3b and $p5c!=$p3c and
+        $p5a!=$p4a and $p5b!=$p4b and $p5c!=$p4c
+      </when>
+    </award>
+    </answer>  
+  <feedback condition="$p5a=$p1a or $p5b=$p1b or $p5c=$p1c or $p5a=$p2a or $p5b=$p2b or $p5c=$p2c or $p5a=$p3a or $p5b=$p3b or $p5c=$p3c or $p5a=$p4a or $p5b=$p4b or $p5c=$p4c">Remember <em>not</em> use any of the values <m>a</m>, <m>b</m> or <m>c</m> used previously.</feedback>
+  <feedback condition="($p5aInt=false or $p5bInt=false or $p5cInt=false) and $p5.responseHasBeenSubmitted=true">Remember that <m>a</m>, <m>b</m> and <m>c</m> must all be integers. </feedback>
+  <feedback condition="($p5a = 0 or $p5a = 1 or $p5a = -1 or $p5b = 0 or $p5b = 1 or $p5b = -1 or $p5c = 0 or $p5c = 1 or $p5c = -1) and $p5.responseHasBeenSubmitted=true">Remember that <m>a</m>,<m>b</m> or <m>c</m> cannot be <m>-1</m>, <m>0</m> or <m>1</m>!</feedback>
+
+</section>

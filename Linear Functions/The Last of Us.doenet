@@ -1,0 +1,255 @@
+      <!-- **********************************************************************
+
+Course:    Intermediate Algebra/Algebra I
+Chapter:   1. Linear Equations
+Section:   3. The Last of US 
+Author:    Anurag Katyal, Summer 2023
+Contact:   anurag@whyoverhow.com
+
+I'd love feedback on the activity or suggestions for improving the activity. 
+
+About the activity: My goal in writing this activity was to invite students to wrestle with the ideas of rates of change and slope-intercept form without a formal introduction. The jargon will be discussed in the class meeting following this activity. 
+
+********************************************************************** -->
+
+<section boxed><title>The Last of Us</title>
+
+<image source="https://i.imgur.com/c1irBII.jpeg" width='800'></image>
+  
+<ref to = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hbo.com%2Fthe-last-of-us&psig=AOvVaw2q5AVfkfz0gJRGMkk957YW&ust=1691964202200000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPDosoWQ2IADFQAAAAAdAAAAABAD"> Image from www.HBO.com</ref>
+
+<p>The Last of Us is a 2013 action-adventure game developed by Naughty Dog and published by Sony Computer Entertainment. Players control Joel, a smuggler tasked with escorting a teenage girl, Ellie, across a post-apocalyptic United States. The Last of Us is played from a third-person perspective. Players use firearms and improvised weapons and can use stealth to defend against hostile humans and cannibalistic creatures infected by a mutated fungus. In the online multiplayer mode, up to eight players engage in cooperative and competitive gameplay <ref to="https://en.wikipedia.org/wiki/The_Last_of_Us"> (from www.wikipedia.com)</ref></p>
+
+<p>Clickers are the third stage of the infected in The Last of Us, The Last of Us Part II, and Left Behind. They take roughly a year to reach this stage of infection after exposure to the Cordyceps brain infection <ref to =  "https://thelastofus.fandom.com/wiki/Clicker">(from www.fandom.com)</ref>. </p>
+			
+<p>HBO released a critically acclaimed TV show by the same title a few months ago. The show stars Pedro Pascal as Joel and Bella Ramsey as Ellie.</p>
+
+</section>
+
+<section boxed><title>The Fungus Spreads...</title>
+
+  <p>In our activity, the fungus spreads quite a bit faster to create new clickers according to the pattern below.</p>
+    
+  <image source='https://i.imgur.com/mEbzI6i.png' description='Clicker Growing Dots' width='800' mimeType='image/png' />
+	
+<!--**********************************************************************
+                              Problem 1
+***********************************************************************-->
+  
+    <problem>How many clickers would there be at 3 minutes? <mathInput name="studentAnswer1_1"/>
+      <answer>
+        <award>
+          <when>
+            $studentAnswer1_1 = 13
+          </when>
+        </award>
+      </answer>
+    </problem>
+
+<!--**********************************************************************
+                              Problem 2
+***********************************************************************-->
+  
+    <problem>How many clickers would there be at 6 minutes? <mathInput name="studentAnswer1_2"/>
+      <answer>
+        <award>
+          <when>
+            $studentAnswer1_2 = 25
+          </when>
+        </award>
+      </answer>
+    </problem>
+
+<!--**********************************************************************
+                              Problem 3
+***********************************************************************-->
+  
+    <problem>How many clickers would there be at 1000 minutes? <mathInput name="studentAnswer1_3"/>
+      <answer>
+        <award>
+          <when>
+            $studentAnswer1_3 = 4001
+          </when>
+        </award>
+      </answer>
+    </problem>
+  
+<!--**********************************************************************
+                              Problem 4
+***********************************************************************-->
+
+    <problem>At any time, Joel can outthink and escape from at most 173 clickers by himself without needing anyone else's help. It's been 45 minutes since he escaped from a terrifying band of clickers, but he just ran into another band of clickers! Will he be able to outthink this new band of clickers alone, or will he need Ellie's help? Explain your reasoning.         
+      <p><answer name="studentAnswer1_4" type="text" handGraded forceFullCheckWorkButton expanded>
+           <textInput width="700" height="80"/>
+         </answer>
+      </p>
+    </problem>
+
+<!--**********************************************************************
+                              Problem 5
+***********************************************************************-->
+  
+    <problem>How many clickers, <m>C</m>, would there be at <m>t</m> minutes? Your mathematical expression, or model, should give the same number of clickers if you plug in 3, 6 or 100 minutes as in problems 1, 2 and 3. 
+      <p><m>C</m> = <mathInput name = "studentAnswer1_5"></mathInput></p></problem> 
+      <answer>
+        <award>
+          <when>
+            $studentAnswer1_5 = 4t+1
+          </when>
+        </award>
+      </answer>
+
+<!--**********************************************************************
+                              Problem 6
+***********************************************************************-->
+  
+    <problem>Fill in the number of clickers, <m>C</m> in the table below. Fill out the entire table before checking your answer. A partially filled-in table, even if correct, will be marked wrong.
+      <tabular top="minor" bottom="minor" left="minor" right="minor" width="25%" hAlign="center">
+        <row>
+          <cell><m>t</m></cell>
+          <cell><m>C</m></cell>
+        </row>
+        <row>
+          <cell><m>0</m></cell>
+          <cell><mathInput name = "studentAnswer160"></mathInput></cell>
+        </row>
+        <row>
+          <cell><m>1</m></cell>
+          <cell><mathInput name = "studentAnswer161"></mathInput></cell>
+        </row>
+        <row>
+          <cell><m>2</m></cell>
+          <cell><mathInput name = "studentAnswer162"></mathInput></cell>
+        </row>
+        <row>
+          <cell><m>3</m></cell>
+          <cell><mathInput name = "studentAnswer163"></mathInput></cell>
+        </row>
+        <row>
+          <cell><m>4</m></cell>
+          <cell><mathInput name = "studentAnswer164"></mathInput></cell>
+        </row>
+        <row>
+          <cell><m>5</m></cell>
+          <cell><mathInput name = "studentAnswer165"></mathInput></cell>
+        </row>        
+      </tabular>
+      <answer>
+        <award>
+          <when>
+            $studentAnswer160 = 1 and
+            $studentAnswer161 = 5 and
+            $studentAnswer162 = 9 and
+            $studentAnswer163 = 13 and
+            $studentAnswer164 = 17 and
+            $studentAnswer165 = 21
+          </when>
+        </award>
+      </answer>
+    </problem> 
+
+<!--**********************************************************************
+                              Problem 7
+***********************************************************************-->
+  
+    <problem> The points on the graph below, <m>(t, C)</m>, are plotted based on your answers to Problem 6. The time, <m>t</m>, should be on the horizontal axis, and the number of clickers, <m>C</m>, should be on the vertical axis.
+      <graph name="Cvst" xmin="-3" xmax="10" ymin="-3" ymax="23" size="medium" aspectRatio="1/2" showNavigation="false">
+        <xLabel>time</xLabel>
+        <yLabel>Clickers</yLabel>
+        <point labelPosition="upperright" draggable="false">(0, $studentAnswer160)
+          <label>(0, $studentAnswer160)</label></point>
+        <point labelPosition="upperright" draggable="false">(1, $studentAnswer161)      
+          <label>(1, $studentAnswer161)</label></point>
+        <lineSegment name="segment1" endpoints="(0, $studentAnswer160) (1, $studentAnswer161)"/>
+        <point labelPosition="upperright" draggable="false">(2, $studentAnswer162)
+          <label>(2, $studentAnswer162)</label></point>
+        <lineSegment name="segment2" endpoints="(1, $studentAnswer161) (2, $studentAnswer162)"/>
+        <point labelPosition="upperright" draggable="false">(3, $studentAnswer163)
+          <label>(3, $studentAnswer163)</label></point>
+        <lineSegment name="segment3" endpoints="(2, $studentAnswer162) (3, $studentAnswer163)"/>
+        <point labelPosition="upperright" draggable="false">(4, $studentAnswer164)
+          <label>(4, $studentAnswer164)</label></point>
+        <lineSegment name="segment4" endpoints="(3, $studentAnswer163) (4, $studentAnswer164)"/>        
+        <point labelPosition="upperright" draggable="false">(5, $studentAnswer165)
+          <label>(5, $studentAnswer165)</label></point>
+        <lineSegment name="segment5" endpoints="(4, $studentAnswer164) (5, $studentAnswer165)"/> 
+      </graph>
+      <p>Say at least two things about any patterns you observe regarding the location of the points above.</p> 
+      <p><answer name="studentAnswer1_7" type="text" handGraded forceFullCheckWorkButton expanded>
+           <textInput width="700" height="80"/>
+         </answer>
+      </p>
+    </problem>
+
+<!--**********************************************************************
+                              Problem 8
+***********************************************************************-->
+  
+    <problem> Complete the following sentences. Be as precise as possible!
+        <problem includeParentNumber> The number of clickers changes from 17 to 29 in ...
+          <p><answer name="studentAnswer1_8_1" type="text" handGraded forceFullCheckWorkButton expanded><textInput width="500" height="30"/></answer></p>
+        </problem>
+        <problem includeParentNumber> From 8 to 12 minutes, the number of clickers ...
+          <p><answer name="studentAnswer1_8_2" type="text" handGraded forceFullCheckWorkButton expanded><textInput width="500" height="30"/></answer></p>
+        </problem>
+        <problem includeParentNumber> Every minute, the number of clickers ...
+          <p><answer name="studentAnswer1_8_3" type="text" handGraded forceFullCheckWorkButton expanded><textInput width="500" height="30"/></answer></p>
+        </problem>
+    </problem>
+
+<!--**********************************************************************
+                              Problem 9
+***********************************************************************-->
+
+    <problem> While hiding in a building, Joel came across a new band of clickers, observed them, and noted the points in the table below. Write a mathematical expression, or model, that you could use to find the number of clickers at any time, <m>t</m>. If you plug in any <m>t</m> values, your model should give the same number of clickers.
+      <tabular top="minor" bottom="minor" left="minor" right="minor" width="25%" hAlign="center">
+        <row>
+          <cell><m>t</m></cell>
+          <cell><m>C</m></cell>
+        </row>
+        <row>
+          <cell><m>0</m></cell>
+          <cell><m>3</m></cell>
+        </row>
+        <row>
+          <cell><m>1</m></cell>
+          <cell><m>8</m></cell>
+        </row>
+        <row>
+          <cell><m>2</m></cell>
+          <cell><m>13</m></cell>
+        </row>
+        <row>
+          <cell><m>3</m></cell>
+          <cell><m>18</m></cell>
+        </row>
+        <row>
+          <cell><m>4</m></cell>
+          <cell><m>23</m></cell>
+        </row>
+        <row>
+          <cell><m>5</m></cell>
+          <cell><m>28</m></cell>
+        </row>        
+      </tabular>
+      <p><m>C</m> = <mathInput name = "studentAnswer1_9"></mathInput></p>
+      <answer>
+        <award>
+          <when>
+            $studentAnswer1_9 = 5t+3
+          </when>
+        </award>
+      </answer>
+    </problem>
+
+<!--**********************************************************************
+                              Problem 10
+***********************************************************************-->
+
+    <problem> Is this new band growing faster or slower than the one discussed initially (problems 1 - 8)? How can you tell? 
+      <p><answer name="studentAnswer1_10" type="text" handGraded forceFullCheckWorkButton expanded>
+           <textInput width="700" height="80"/>
+         </answer>
+      </p>
+    </problem>
+</section>

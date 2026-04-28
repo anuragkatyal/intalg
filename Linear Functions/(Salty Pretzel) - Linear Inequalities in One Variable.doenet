@@ -1,0 +1,163 @@
+<title>Linear Inequalities in One Variable</title>
+
+<aside boxed>
+  <title>Instructions for Salty Pretzel</title>
+  <ul>
+    <li>Start anywhere and enter 1 in the box next to the first problem you choose to solve.</li>
+    <li>Find your answer in another problem and label it 2. Continue until you return to your starting problem.</li>
+    <li>Some problems are <em>distractors</em>. Their answers do not appear anywhere. Mark these with an X.</li>
+    <li>If you start on a distractor, choose a new starting problem.</li>
+    <li>There is exactly one correct loop.</li>
+  </ul>
+</aside>
+
+<setup>
+  <selectFromSequence name="sol" from="-6" to="6" exclude="0" numToSelect="8"/>
+  <selectFromSequence name="distractor" from="7" to="11"/>
+</setup>
+
+<pretzel name="pretzel1" maxNumColumns="2">
+
+  <!-- problem 1 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="a" from="2" to="8"/>
+        <selectFromSequence name="b" from="-5" to="5" exclude="0"/>
+        <math name="c" simplify>$a*$sol[1]+$b</math>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">$a*x + $b < $c</math>
+    </statement>
+    <answer>
+      <math simplify="numbersPreserveOrder">x < $sol[1]</math>
+    </answer>
+  </problem>
+
+  <!-- problem 2 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="2" to="8" numToSelect="2"/>
+        <selectFromSequence name="a" from="-8" to="-2"/>
+        <math name="b" extend="$const[1]"/>
+        <math name="c" extend="$const[2]"/>
+        <math name="d" simplify>($a * $sol[2] + $b)/$c</math>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">($a x + $b)/$c >= $d</math>
+    </statement>
+    <answer>
+      <m>x \leq $sol[2]</m>
+    </answer>
+  </problem>
+
+  <!-- problem 3 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="-5" to="5" exclude="-1 0 1" numToSelect="2"/>
+        <selectFromSequence name="e" from="-6" to="-2"/>
+        <selectFromSequence name="leadingCoeff" from="2" to="8" coprime numToSelect="2" sortResults/>
+        <math name="a" extend="$leadingCoeff[1]"/>
+        <math name="b" extend="$leadingCoeff[2]"/>
+        <math name="c" extend="$const[1]"/>
+        <math name="d" simplify>$e*($sol[3]+$f)-$a/$b*($sol[3]+$c)</math>
+        <math name="f" extend="$const[2]"/>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">$a/$b*(x + $c) + $d < $e*(x+$f)</math>
+    </statement>
+    <answer>
+      <m>(-\infty, $sol[3])</m>
+    </answer>
+  </problem>
+
+  <!-- problem 4 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="a" from="-8" to="-2"/>
+        <selectFromSequence name="b" from="-5" to="5" exclude="0"/>
+        <math name="c" simplify>$a*($sol[4]+$b)</math>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">$a*(x + $b) > $c</math>
+    </statement>
+    <answer>
+      <m>(-\infty, $sol[4])</m>
+    </answer>
+  </problem>
+
+  <!-- problem 5 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="-5" to="5" exclude="-1 0 1" numToSelect="2"/>
+        <selectFromSequence name="e" from="-6" to="-2"/>
+        <selectFromSequence name="leadingCoeff" from="2" to="8" coprime numToSelect="2" sortResults/>
+        <math name="a" extend="$leadingCoeff[1]"/>
+        <math name="b" extend="$leadingCoeff[2]"/>
+        <math name="c" extend="$const[1]"/>
+        <math name="d" simplify>$e*($sol[5]+$f)-$a/$b*($sol[5]+$c)</math>
+        <math name="f" extend="$const[2]"/>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">$a/$b*(x + $c) + $d - $e*(x+$f) >= 0 </math>
+    </statement>
+    <answer>
+      <m>[$sol[5], \infty)</m>
+    </answer>
+  </problem>
+
+  <!-- problem 6 -->
+  <problem isDistractor>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="2" to="8" numToSelect="3"/>
+        <selectFromSequence name="a" from="-8" to="-2"/>
+        <math name="b" extend="$const[1]"/>
+        <math name="c" simplify>(($e-$a)/$b-$d)/$distractor</math>
+        <math name="d" extend="$const[2]"/>
+        <math name="e" extend="$const[3]"/>
+        <math name="exp" simplify="numbersPreserveOrder">$c x + $d</math>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">$a + $b(<m>$exp</m>) <= $e</math>      
+    </statement>
+    <answer>
+      <m>[$sol[6], \infty)</m>
+    </answer>
+  </problem>
+
+  <!-- problem 7 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="a" from="2" to="5"/>
+        <selectFromSequence name="d" from="6" to="10"/>
+        <selectFromSequence name="const" from="-5" to="5" exclude="-1 0 1" numToSelect="2"/>
+        <selectFromSequence name="const2" from="2" to="9" numToSelect="2"/>
+        <math name="b" extend="$const[1]"/>
+        <math name="e" extend="$const[2]"/>
+        <math name="c" extend="$const2[1]"/>
+        <math name="f" extend="$const2[2]"/>
+        <math name="g" simplify>($a*$sol[7]+$b)/$c+($d*$sol[7]+$e)/$f</math>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">($a*x+$b)/$c+($d*x+$e)/$f < $g </math>
+    </statement>
+    <answer>
+      <m>x < $sol[7]</m>
+    </answer>
+  </problem>
+
+  <!-- problem 8 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="a" from="-8" to="-2"/>
+        <selectFromSequence name="b" from="-5" to="5" exclude="0"/>
+        <math name="c" simplify>$a*($sol[8]+$b)</math>
+      </setup>
+      Solve <math simplify="numbersPreserveOrder">$a*(x + $b) < $c</math>
+    </statement>
+    <answer>
+      <m>($sol[8], \infty)</m>
+    </answer>
+  </problem>
+  
+</pretzel>

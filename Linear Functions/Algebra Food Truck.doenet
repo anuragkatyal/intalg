@@ -1,0 +1,377 @@
+<!-- 
+
+Course:    Intermediate Algebra
+Chapter:   #. Linear Functions
+Section:   #. 
+Author:    Anurag Katyal, Spring 2025
+Contact:   anurag@whyoverhow.com 
+
+About the activity:
+
+-->
+
+<setup>
+  
+   <styleDefinitions>
+    <styleDefinition styleNumber="10"
+      lineColor="black" 
+      lineOpacity="1"  
+      lineWidth="1.5"
+      lineStyle="dashed">
+    </styleDefinition>
+    
+    <styleDefinition styleNumber="11"
+      fillColor="SkyBlue"
+      lineColor="SkyBlue" 
+      lineOpacity="1"  
+      lineWidth="0.155"
+      >
+    </styleDefinition>
+
+    <styleDefinition styleNumber="15"
+      fillColor="red"
+      lineColor="red" 
+      lineOpacity="1"  
+      lineWidth="0.155"
+      >
+    </styleDefinition>
+      
+      <styleDefinition styleNumber="12"
+      fillColor="orange"
+        fillOpacity="0.7"
+      lineColor="orange" 
+      lineOpacity="1"  
+      lineWidth="1"
+      markerColor="orange"
+      >
+    </styleDefinition>
+        
+        <styleDefinition styleNumber="13"
+      fillColor="green"
+      lineColor="green" 
+      lineOpacity="1"  
+      lineWidth="2"
+       markerColor="green"
+      >
+    </styleDefinition>
+
+        <styleDefinition styleNumber="16"
+      fillColor="purple"
+      lineColor="purple" 
+      lineOpacity="1"  
+      lineWidth="0.155"
+      >
+    </styleDefinition>
+    
+    <styleDefinition styleNumber="14"
+      lineColor="black" 
+      lineOpacity="1"  
+      lineWidth="1"
+      lineStyle="dotted">
+    </styleDefinition>
+
+    <styleDefinition styleNumber="17"
+      fillColor="brown"
+      lineColor="brown" 
+      lineOpacity="1"  
+      lineWidth="1"
+      lineStyle="solid">
+    </styleDefinition>
+
+  </styleDefinitions>
+  
+  <selectFromSequence name="burgerCost" from="2" to="3"></selectFromSequence>
+  <selectFromSequence name="burgerPrice" from="8" to="12"></selectFromSequence>
+  <selectFromSequence name="const" from="20" to="50" step="2" numToSelect="14"></selectFromSequence>
+  <math name="b1" extend="$const[1]"/>
+  <math name="b2" extend="$const[2]"/>
+  <math name="c1" extend="$const[3]"/>
+  <math name="c2" extend="$const[4]"/>
+  <math name="revComp1" extend="$const[5]"/>
+  <math name="costComp1" extend="$const[6]"/>
+  <math name="revComp2" extend="$const[7]"/>
+  <math name="costComp2" extend="$const[8]"/>
+  <math name="p1" extend="$const[9]"/>
+  <math name="p2" extend="$const[10]"/>
+  <math name="p3" extend="$const[11]"/>
+  <math name="p4" extend="$const[12]"/>
+  <math name="p5" extend="$const[13]"/>
+  <math name="p6" extend="$const[14]"/>
+  <select name="parkingPrice">5 10 15 20</select>
+  <select name="kitchen">5 10 15 20</select>
+  <function name="R">$burgerPrice x</function>
+  <function name="C">$fixedCost + $burgerCost x</function>
+  <math name="preP" simplify>$burgerPrice x - $burgerCost x</math>
+  <function name="P">$R-$C</function>
+  <math name="pLeft" simplify="numberspreserveorder">$preP-$fixedCost</math>
+  <math name="pRight" simplify="numberspreserveorder">-$fixedCost+$preP</math>
+  <math name="fixedCost" simplify>$parkingPrice+$kitchen</math>
+  <math name="wrongCost1" simplify>$c1*$burgerCost</math>
+  <math name="wrongCost2" simplify>$c1*$burgerPrice</math>
+  <math name="wrongCost3" simplify>$fixedCost+$c1*$burgerPrice</math>
+  <math name="ymaxR" simplify><max>$rP1Graph.x $rP1Graph.y $rP2Graph.x $rP2Graph.y</max>+10</math>
+  <math name="ymaxC" simplify><max>$cP1Graph.x $cP1Graph.y $cP2Graph.x $cP2Graph.y</max>+10</math>
+  <math name="ymaxP" simplify><max>$cP1Graph.x $cP1Graph.y $cP2Graph.x $cP2Graph.y $pP2Graph.x $pP2Graph.y</max>+10</math>
+  <math name="yminR" simplify><min>$rP1Graph.x $rP1Graph.y $rP2Graph.x $rP2Graph.y</min>-10</math>
+  <math name="yminC" simplify><min>$cP1Graph.x $cP1Graph.y $cP2Graph.x $cP2Graph.y</min>-10</math>
+  <math name="yminP" simplify><min>$cP1Graph.x $cP1Graph.y $cP2Graph.x $cP2Graph.y $pP2Graph.x $pP2Graph.y</min>-10</math>
+  <graph>
+    <point name="rP1Graph" styleNumber="5"><label>$rPoint1</label>$rPoint1</point>
+    <point name="rP2Graph" styleNumber="5"><label>$rPoint2</label>$rPoint2</point>
+    <point name="cP1Graph" styleNumber="2" labelPosition="left"><label>$cPoint1</label>$cPoint1</point>
+    <point name="cP2Graph" styleNumber="2" labelPosition="left"><label>$cPoint2</label>$cPoint2</point>
+    <point name="pP1Graph" styleNumber="13"><label>$pPoint1</label>$pPoint1</point>
+    <point name="pP2Graph" styleNumber="13"><label>$pPoint2</label>$pPoint2</point>
+<!--     <point name="rP1Graph" styleNumber="13">$rPoint1</point>
+    <point name="rP2Graph" styleNumber="13">$rPoint2</point>
+    <point name="cP1Graph" styleNumber="2">$cPoint1</point>
+    <point name="cP2Graph" styleNumber="2">$cPoint2</point>
+     -->
+    <line name="graphOfR" through="$rP1Graph $rP2Graph" styleNumber="5"></line>
+    <line name="graphOfC" through="$cP1Graph $cP2Graph" styleNumber="2"></line>
+    <line name="graphOfP" through="$pP1Graph $pP2Graph" styleNumber="13"></line>
+    <line name="xAxis" through="(0,0) (1,0)" styleNumber="5"></line>
+    <line name="yAxis" through="(0,0) (0,1)" styleNumber="5"></line>
+  </graph>
+</setup>
+
+<title>Algebra Food Truck: Lettuce Solve for <m>x</m>!</title>
+
+<section boxed><title>Prep time</title>
+  <image source="https://i.imgur.com/w5LdssX.png" width="70%"/>
+  <p>Image generated by <ref to="https://sora.chatgpt.com">Sora.</ref></p>
+
+  
+  <p>Let's say you operate a food truck, called the Algebra Food Truck, selling burgers at local events. To understand your future business needs and profits (and because you are an excellent Algebra student), you model daily revenue and costs using algebra. Some fast facts about the business:</p>
+  <ul>
+    <li>Each burger costs you &dollar;<m>$burgerCost</m> in raw materials.</li> 
+    <li>Each burger is sold for &dollar;<m>$burgerPrice</m>.</li>
+    <li>A parking pass costing &dollar;<m>$parkingPrice</m> is necessary to conduct business whenever you go. The parking pass must only be purchased once daily, regardless of how many burgers you sell.</li>
+    <li>Commissary kitchens are commercial kitchen spaces where you prep all the food before heading out. For each day that you use the commissary kitchen, you must pay &dollar;<m>$kitchen</m> per day, regardless of how many burgers you sell.</li>
+  </ul>
+</section>
+
+<section boxed><title>Let's cook some functions</title>
+  
+  <image source="https://i.imgur.com/tbux5eP.png" width="70%"/>
+  <p>Image generated by <ref to="https://sora.chatgpt.com">Sora.</ref></p>
+
+  
+  <p>A <term>revenue function</term> is a function used to calculate how much money (revenue) a business earns from selling a product or service. Typically, it looks like: <me>R(x)=(\text{price per unit}) \cdot (\text{number of units sold})</me></p>
+  <ol>
+    <li><p>What is your revenue if you sell <m>$b1</m> burgers? &dollar;<answer symbolicEquality><math simplify>$b1*$burgerPrice</math></answer></p></li>
+    <li><p>What is your revenue if you sell <m>$b2</m> burgers? &dollar;<answer symbolicEquality><math simplify>$b2*$burgerPrice</math></answer></p></li>
+    <li><p>What is your revenue if you sell <m>x</m> burgers? &dollar;<answer name="revFunc" symbolicEquality><math simplify>$burgerPrice x</math></answer></p>
+    </li>
+  </ol>
+  
+  <p hide="not $revFunc.creditAchieved=1">Awesome! This is actually your revenue function: <m>R(x)=$burgerPrice x</m>, where <m>x</m> is the number of burgers and revenue is in dollars.</p>
+  <nbsp></nbsp>
+  <p>A <term>cost function</term> is a function that describes how the total costs of operating a business depend on the quantity of goods or services produced or sold. It typically has two parts:</p>
+  <ul>
+    <li><p>Fixed costs (expenses that don’t change with quantity).
+</p></li>
+    <li><p>Variable costs (expenses that change with each additional unit produced or sold).
+</p></li>
+  </ul>
+A cost function usually looks like this: <me>C(x)=(\text{fixed cost}) + (\text{cost per unit}) \cdot (\text{number of units sold})</me>
+
+  <ol>
+    <li><p>What is your fixed cost? &dollar;<answer symbolicEquality>$fixedCost</answer></p></li>
+    <li><p>What is your total cost if you prepare $c1 burgers? &dollar;<answer name="cost1" symbolicEquality><math simplify>$fixedCost+$c1*$burgerCost</math></answer>
+
+    <feedback condition="$cost1=$wrongCost1">Be sure to account for fixed costs.</feedback>
+    <feedback condition="$cost1=$wrongCost2">Be sure to account for fixed costs and to use the cost of the burger to you, not the price you sell the burger for.</feedback>
+    <feedback condition="$cost1=$wrongCost3">Be sure to use the cost of the burger to you, not the price you sell the burger for.</feedback>
+    </p></li> 
+    <li><p>What is your total cost if you prepare $c2 burgers? &dollar;<answer symbolicEquality><math simplify>$fixedCost+$c2*$burgerCost</math></answer></p></li> 
+    <li><p>What is your total cost if you prepare <m>x</m> burgers? &dollar;<answer name="costFunc" symbolicEquality><award>$fixedCost+$burgerCost x</award><award>$burgerCost x+$fixedCost</award></answer></p></li> 
+  </ol>
+
+  <p hide="not $costFunc.creditAchieved=1">Great! You've found the function that gives you the total cost of operation on any given day, <m>C(x)=$costFunc</m>, where again, <m>x</m> is the number of burgers and cost is in dollars.</p>
+</section>
+
+<section boxed><title>Let's make some estimations</title>
+  <div hide="not $costFunc.creditAchieved=1">
+  <image source="https://i.imgur.com/OeU5oGu.png" width="70%"/>
+  <p>Image generated by <ref to="https://sora.chatgpt.com">Sora.</ref></p>
+
+  
+  <p>The revenue function, <m>R(x)</m>, and the cost function, <m>C(x)</m>, allow you to manipulate the number of burgers to find the total revenue or the total cost but also work backward from the total revenue or the total cost to find out how many burgers were sold or prepped. Let's formalize some conceptual features first.</p>  
+
+  <ol>
+    <li><p>For <m>R(x)=$revFunc</m> and <m>C(x)=$costFunc</m>, select all of the following that are true.</p>
+      <answer selectMultiple matchPartial shuffleOrder>
+        <choice credit="1"><m>x</m> is the independent (input) variable.</choice>
+        <choice><m>x</m> is the dependent (output) variable.</choice>
+        <choice><m>R</m> is the independent (input) variable.</choice>
+        <choice credit="1"><m>R</m> is the dependent (output) variable.</choice>
+        <choice><m>C</m> is the independent (input) variable.</choice>
+        <choice credit="1"><m>C</m> is the dependent (output) variable.</choice>
+      </answer>
+    </li>
+
+    <li><p>When graphing <m>R(x)</m> and <m>C(x)</m> in separate graphs, select all of the following that are true:</p>
+      <answer selectMultiple matchPartial shuffleOrder>
+        <choice credit="1">one would label the horizontal axis as <m>x</m> and the vertical axis as <m>R</m>.</choice>
+        <choice credit="1">one would label the horizontal axis as <m>x</m> and the vertical axis as <m>C</m>.</choice>
+        <choice>one would label the horizontal axis as <m>R</m>, and the vertical axis as <m>x</m>.</choice>
+        <choice>one would label the horizontal axis as <m>C</m>, and the vertical axis as <m>x</m>.</choice>
+        <choice>one would label the horizontal axis as <m>C</m>, and the vertical axis as <m>R</m>.</choice>
+        <choice>one would label the horizontal axis as <m>R</m>, and the vertical axis as <m>C</m>.</choice>
+      </answer>
+    </li>
+    <li><p>For <m>R(x)=$R</m> and <m>C(x)=$C</m>, select all of the following that are true.</p>
+      <answer selectMultiple matchPartial shuffleOrder>
+        <choice credit="1"><m>C(50)</m> represents the total cost of operation of prepping <m>50</m> burgers.</choice>
+        <choice credit="1"><m>R(50)</m> represents the total revenue from selling <m>50</m> burgers.</choice>
+        <choice><m>C(50)</m> represents the number of burgers prepped for &dollar;<m>50</m>.</choice>
+        <choice><m>R(50)</m> represents the number of burgers sold for &dollar;<m>50</m>.</choice>
+      </answer>
+    </li>
+    <li><p>For <m>R(x)=$R</m> and <m>C(x)=$C</m>, select all of the following that are true.</p>
+      <answer selectMultiple matchPartial shuffleOrder>
+        <choice credit="1"><m>R(50)=$$R(50)</m> represents a revenue of &dollar;<m>$$R(50)</m> from selling <m>50</m> burgers.</choice>
+        <choice><m>R(50)=$$R(50)</m> represents a revenue of &dollar;<m>50</m> from selling <m>$$R(50)</m> burgers.</choice>
+        <choice><m>C(50)=$$C(50)</m> represents a cost of &dollar;<m>50</m> for prepping <m>$$C(50)</m> burgers.</choice>
+        <choice credit="1"><m>C(50)=$$C(50)</m> represents a cost of &dollar;<m>$$C(50)</m> for prepping <m>50</m> burgers.</choice>
+      </answer>
+    </li>
+    <li><p>When finding <m>R($revComp1)</m>, one should,</p>
+      <answer shuffleOrder>
+        <choice>multiply the function <m>R</m> by <m>$revComp1</m> and simplify to find <m>R</m>.</choice>
+        <choice>multiply the function <m>R</m> by <m>$revComp1</m> and simplify to find <m>x</m>.</choice>
+        <choice>set <m>R(x)</m> equal to <m>$revComp1</m> and solve for <m>x</m>.</choice>
+        <choice>set <m>R(x)</m> equal to <m>$revComp1</m> and solve for <m>R</m>.</choice>
+        <choice credit="1">replace all the <m>x</m>'s in <m>R(x)</m> with <m>$revComp1</m> to find <m>R</m>.</choice>
+        <choice>replace all the <m>x</m>'s in <m>R(x)</m> with <m>$revComp1</m> to find <m>x</m>.</choice>
+      </answer>
+    </li>
+    <li><p>When finding <m>R(x)=$revComp1</m>, one should,</p>
+      <answer shuffleOrder>
+        <choice>multiply the function <m>R</m> by <m>$revComp1</m> and simplify to find <m>R</m>.</choice>
+        <choice>multiply the function <m>R</m> by <m>$revComp1</m> and simplify to find <m>x</m>.</choice>
+        <choice credit="1">set <m>R(x)</m> equal to <m>$revComp1</m> and solve for <m>x</m>.</choice>
+        <choice>set <m>R(x)</m> equal to <m>$revComp1</m> and solve for <m>R</m>.</choice>
+        <choice>replace all the <m>x</m>'s in <m>R(x)</m> with <m>$revComp1</m> to find <m>R</m>.</choice>
+        <choice>replace all the <m>x</m>'s in <m>R(x)</m> with <m>$revComp1</m> to find <m>x</m>.</choice>
+      </answer>
+    </li>
+    <li><p>What is <m>R($revComp1)</m>? <answer symbolicEquality>$$R($revComp1)</answer></p></li>
+    <li><p>What is <m>C($costComp1)</m>? <answer symbolicEquality>$$C($costComp1)</answer></p></li>
+    <li><p>When is <m>R(x)=$$R($revComp2)</m>? <answer symbolicEquality>$revComp2</answer></p></li>
+    <li><p>When is <m>C(x)=$$C($costComp2)</m>? <answer name="lastCost" symbolicEquality>$costComp2</answer></p></li>
+  </ol>
+  </div>
+</section>
+  
+<section boxed><title>Let's make some money (hopefully)</title>
+  <div hide="not $lastCost.creditAchieved=1">
+  <image source="https://i.imgur.com/vXcXSQJ.png" width="70%"/>
+  <p>Image generated by <ref to="https://sora.chatgpt.com">Sora.</ref></p>
+
+  
+  <p>A <term>profit function</term> shows the relationship between the number of products or services sold and the total profit earned by a business. Profit measures how much money you have <em>left over</em> after subtracting your costs from your revenue. It’s expressed mathematically as: <me>P(x)=R(x)-C(x)</me></p>
+  
+  
+  <p>Revenue and profit are often used interchangeably, but this is incorrect. If you sell goods for a total of <m>$100</m> but they cost you <m>$150</m> to manufacture, you have a loss of <m>$50</m>, not a profit. Many companies have extremely high revenues due to high sales, but that does not require them to also have high profits.</p>  
+
+  <ol>
+    <li><p>Select all the expressions that can be used to find the profit from selling <m>$p1</m> burgers.</p>
+    <answer selectMultiple shuffleOrder matchPartial>
+      <choice credit="1"><m>P($p1)</m></choice>
+      <choice><m>R($p1)</m></choice>
+      <choice><m>C($p1)</m></choice>
+      <choice credit="1"><m>R($p1)-C($p1)</m></choice>
+      <choice><m>C($p1)-R($p1)</m></choice>
+      <choice><m>C($p1)-R($p1)</m></choice>
+      <choice><m>P($p1)-R($p1)</m></choice>
+    </answer>
+    </li>
+    <li><p>If <m>R($p2)=$$R($p2)</m> and <m>C($p2)=$$C($p2)</m>, what is <m>P($p2)</m>? <answer symbolicEquality>$$P($p2)</answer></p></li>
+    <li><p>If <m>R(x)=$revFunc</m> and <m>C(x)=$costFunc</m>, what is <m>P(x)</m>? <answer name="profitFunc" symbolicEquality><award>$pLeft</award><award>$pRight</award></answer></p></li>
+    <li><p>What is <m>P($p3)</m>?<answer symbolicEquality>$$P($p3)</answer></p></li>
+    <li><p>What is the profit from selling <m>$p4</m> burgers?<answer symbolicEquality>$$P($p4)</answer></p></li>
+    <li><p>If &dollar;<m>$$P($p5)</m> of profit was made on a particular day, how many burgers were sold?<answer symbolicEquality>$p5</answer></p></li>
+    <li><p>If &dollar;<m>$$P($p6)</m> of profit was made on a particular day, what was the cost and revenue for that day?</p>
+    <p>Cost=<answer symbolicEquality>$$C($p6)</answer></p>
+    <p>Revenue=<answer name="lastRevenue" symbolicEquality>$$R($p6)</answer></p>
+    </li>
+  </ol>
+  </div>
+</section>
+
+<section boxed><title>Let's line things up</title>
+<div hide="not $lastRevenue.creditAchieved=1">
+  
+  <image source="https://i.imgur.com/18ytBlt.png" width="70%"/>
+  <p>Image generated by <ref to="https://sora.chatgpt.com">Sora.</ref></p>
+
+  
+Recall that there are multiple ways to find the two points we need to graph straight lines. We can:
+  <ul>
+    <li>pick any value for the <m>x</m> or <m>y</m> coordinate and find the missing coordinate.</li>
+    <li>plot the <m>y</m>-intercept and then use <m>m</m>, the slope, to plot another point on the line.</li>
+    <li>find the <m>x</m>- and <m>y</m>-intercepts and plot them.</li>
+  </ul>
+
+  <ol>
+    <li><p>Graph <m>R(x)=$revFunc</m> by listing two different points that lie on <m>R(x)</m>.</p>
+      <p>First Point: <mathInput name="rPoint1" prefillLatex="(,)"></mathInput>, Second Point: <mathInput name="rPoint2" prefillLatex="(,)"></mathInput>
+        <answer name="pointsOnR" symbolicEquality><award><when>$rPoint1!=$rPoint2 and $$R($rP1Graph.x)=$rP1Graph.y and $$R($rP2Graph.x)=$rP2Graph.y</when></award></answer></p>
+    <feedback condition="$rPoint1=$rPoint2">Be sure to list two <em>different</em> points!</feedback>
+
+      <graph fixed hide="not $pointsOnR.creditAchieved=1" displayXAxisTickLabels="false" displayYAxisTickLabels="false" displayXAxis="false" displayYAxis="false" ymin="$yminR" ymax="$ymaxR">
+        <xLabel>$</xLabel>
+        <yLabel>x</yLabel>
+        $xAxis
+        $yAxis
+        $rP1Graph
+        $rP2Graph
+        $graphOfR
+      </graph></li>
+    <li><p>Graph <m>C(x)=$costFunc</m> by listing the <m>y</m>-intercept and an additional point found using the slope.</p>
+      
+      <p><m>y</m>-intercept: <mathInput name="cPoint1" prefillLatex="(,)"></mathInput>, Second Point: <mathInput name="cPoint2" prefillLatex="(,)"></mathInput>
+        <answer name="pointsOnC" symbolicEquality><award><when>$cPoint1!=$cPoint2 and $cP1Graph.x=0 and $$C($cP1Graph.x)=$cP1Graph.y and $$C($cP2Graph.x)=$cP2Graph.y</when></award></answer></p>
+    <feedback condition="$cPoint1=$cPoint2">Be sure to list two <em>different</em> points!</feedback>
+    
+      
+    <graph ymax="$ymaxC" ymin="-5" hide="not $pointsOnC.creditAchieved=1"  displayXAxisTickLabels="false" displayYAxisTickLabels="false" displayXAxis="false" displayYAxis="false">
+      <xLabel>$</xLabel>
+      <yLabel>x</yLabel>
+      $xAxis
+      $yAxis
+      $cP1Graph
+      $rP1Graph
+      $cP2Graph
+      $rP2Graph
+      $graphOfC
+      $graphOfR
+    </graph>  
+    </li>
+    
+    <li><p>Graph <m>P(x)=$profitFunc</m> by listing the <m>x</m>-intercept and another point <em>besides</em> the <m>y</m>-intercept.</p>
+      <p><m>x</m>-intercept: <mathInput name="pPoint1" prefillLatex="(,)"></mathInput>, Second Point: <mathInput name="pPoint2" prefillLatex="(,)"></mathInput>
+        <answer name="pointsOnP"><award><when>$pPoint1!=$pPoint2 and $pP1Graph.x!=0 and $pP2Graph.x!=0  and $pP1Graph.y=0 and $$P($pP1Graph.x)=$pP1Graph.y and $$P($pP2Graph.x)=$pP2Graph.y</when></award></answer></p>
+    <feedback condition="$pPoint1=$pPoint2">Be sure to list two <em>different</em> points!</feedback>
+    <feedback condition="$pP1Graph.x=0 or $pP2Graph.x=0">Be sure to pick a point <em>besides</em> the <m>y</m>-intercept!</feedback>
+    <graph ymax="$ymaxP" ymin="$yminP" hide="not $pointsOnP.creditAchieved=1"  displayXAxisTickLabels="false" displayYAxisTickLabels="false" displayXAxis="false" displayYAxis="false">
+      <xLabel>$</xLabel>
+      <yLabel>x</yLabel>
+      $xAxis
+      $yAxis
+      $cP1Graph
+      $pP1Graph
+      $rP1Graph
+      $cP2Graph
+      $rP2Graph
+      $pP2Graph
+      $graphOfC
+      $graphOfR
+      $graphOfP
+    </graph>        
+    </li>
+  </ol>
+</div>
+</section>

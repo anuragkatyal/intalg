@@ -1,0 +1,220 @@
+<!-- 
+
+Course:    Intermediate Algebra
+Chapter:   # for <m>x</m>. 
+Section:   # for <m>x</m>. Pretzel - Solving Linear Inequalities in One Variable
+Author:    Anurag Katyal, Spring 2025
+Contact:   anurag@whyoverhow for <m>x</m>.com 
+
+-->
+
+
+<title>(Pretzel) Solving Linear Inequalities in One Variable</title>
+
+
+<section><title></title>
+
+<section><title></title>
+
+  
+  
+<setup>
+  <selectFromSequence name="a" from="3" to="8"/>
+  <selectFromSequence name="b" from="3" to="8" exclude="$a"/>
+</setup>
+
+
+
+<aside boxed>
+  <title>
+    Instructions for Pretzel
+  </title>
+   
+  <ul>
+    <li>Start anywhere in the activity and enter 1 in the box next to the first problem you wish to solve.</li> 
+    <li>Search for your answer, enter '2' in the box and the attached problem becomes problem 2.</li> 
+    <li>Continue in this manner until you return to your first problem, completing the pretzel. There is only one correct path to the end, including all problems.</li>
+    <li>Happy solving!</li>
+  </ul>
+    
+</aside>
+  
+<shuffle>
+
+  <sideBySide margins = "0% 5% 0%">
+
+    <!-- 1 -->
+<shuffle>
+    
+        <section>
+          <title>
+            Answer: <m>\left[$b, \infty\right)</m>
+          </title>
+          <mathInput name="p1" minWidth="25"/> Solve <m>x + <math simplify>$a+$b</math> < $b</m> for <m>x</m>.
+        </section>
+
+        
+      
+    <!-- 2 -->
+      
+      <section>
+          <title>
+            Answer: <m>\left[-$a, \infty\right)</m>
+          </title>
+          <mathInput name="p5" minWidth="25"/> Solve <m>$b x + $a < <math simplify>$b + $a + 1</math></m> for <m>x</m>. 
+        </section>    
+    
+</shuffle>
+    </sideBySide>
+
+   
+    <sideBySide margins = "0% 5% 0%">
+    
+    <!-- 3 -->
+      <shuffle>
+
+        <section>
+          <title>
+            Answer: <m>\left(-\infty, $b\right]</m>
+          </title>
+          <mathInput name="p12" minWidth="25"/> Solve <m><math simplify>$b-$a</math>+<math simplify>$a+$b</math>(x-$b) \geq $b(x-<math simplify>$b-1</math>)-$a</m> for <m>x</m>.
+        </section> 
+      
+      <!-- 4 -->
+        
+        <section>
+          <title>
+            Answer: <m>\left($b, \infty\right)</m>
+          </title>
+          <mathInput name="p11" minWidth="25"/> Solve <m>$b+$a(x-$b) \leq $b</m> for <m>x</m>.
+        </section>
+        
+</shuffle>
+    </sideBySide>
+      
+    <sideBySide margins = "0% 5% 0%">
+    
+    <!-- 5 -->
+      <shuffle>
+
+        <section>
+          <title>
+            Answer: <m>\left(-\infty, <math simplify>($b+1)/$b</math>\right)</m>
+          </title>
+          <mathInput name="p6" minWidth="25"/> Solve <m>$b x + <math simplify>$a+$b</math> > <math simplify>$b + $b + $a + 1</math></m> for <m>x</m>.  
+        </section>
+      
+      <!-- 6 -->
+        <section>
+          <title>
+            Answer: <m>\left(-\infty, <math simplify>($b+1)/$b</math>\right]</m>
+          </title>
+          <mathInput name="p8" minWidth="25"/> Solve <m>$b x + <math simplify>3*$a</math> 
+            \geq <math simplify>$b + 3*$a + 1</math></m> for <m>x</m>.
+        </section>
+        
+</shuffle>
+    </sideBySide>
+    
+    <sideBySide margins = "0% 5% 0%">
+    
+    <!-- 7 -->
+      <shuffle>
+
+        <section>
+          <title>
+            Answer: <m>\left(-$a, \infty\right)</m>
+          </title>
+          <mathInput name="p3" minWidth="25"/> Solve <m>$b(x + $a)+ <math simplify>$a+3</math> \leq <math simplify>$a+3</math></m> for <m>x</m>.
+        </section>
+      
+        
+        
+      <!-- 8 -->
+        
+        <section>
+          <title>
+            Answer: <m>\left[<math simplify>($b+1)/$b</math>, \infty\right)</m>
+          </title>
+          <mathInput name="p9" minWidth="25"/> Solve <m><math simplify>$b-$a</math>+<math simplify>$a-1</math>(x-$b) < <math simplify>$b-$a</math>-(x-$b)</m> for <m>x</m>. 
+        </section>
+        
+</shuffle>
+    </sideBySide>
+    
+    <sideBySide margins = "0% 5% 0%">
+    
+    <!-- 9 -->
+      <shuffle>
+
+        <section>
+          <title>
+            Answer: <m>\left(<math simplify>($b+1)/$b</math>, \infty \right)</m>
+          </title>
+          <mathInput name="p7" minWidth="25"/> Solve <m>-2($b x + <math simplify>$a-1</math>) 
+            \geq <math simplify>-2*($b + $a + 1)+2</math></m> for <m>x</m>.
+        </section>
+        
+        
+      
+      <!-- 10 -->
+        
+        <section>
+          <title>
+            Answer: <m>\left(-\infty, $b\right)</m>
+          </title>
+          <mathInput name="p10" minWidth="25"/> Solve <m><math simplify>-$a*$b</math>+$a(x-$b) > <math simplify>-$a*$b</math></m> for <m>x</m>. 
+        </section>
+        
+        
+</shuffle>
+    </sideBySide>
+    
+    <sideBySide margins = "0% 5% 0%">
+    
+    <!-- 11 -->
+      <shuffle>
+
+        <section>
+          <title>
+            Answer: <m>\left(-\infty, -$a\right)</m>
+          </title>
+          <mathInput name="p2" minWidth="25"/> Solve <m>x + <math simplify>2*$b+$a</math> > <math simplify>2*$b</math></m> for <m>x</m>.
+        </section>
+      
+      <!-- 12 -->
+
+        <section>
+          <title>
+            Answer: <m>\left(-\infty, -$a\right]</m>
+          </title>
+          <mathInput name="p4" minWidth="25"/> Solve <m>x + <math simplify>3*$a</math> \geq <math simplify>2*$a</math></m> for <m>x</m>.
+        </section>
+      
+      
+
+</shuffle>
+    </sideBySide>
+     
+</shuffle>
+  
+  <answer>
+    <award>
+      <when>
+        <mod><math>$p1 - 12</math> 12</mod> 
+      = <mod><math>$p2 - 1</math> 12</mod> 
+      = <mod><math>$p3 - 2</math> 12</mod> 
+      = <mod><math>$p4 - 3</math> 12</mod> 
+      = <mod><math>$p5 - 4</math> 12</mod> 
+      = <mod><math>$p6 - 5</math> 12</mod> 
+      = <mod><math>$p7 - 6</math> 12</mod> 
+      = <mod><math>$p8 - 7</math> 12</mod> 
+      = <mod><math>$p9 - 8</math> 12</mod> 
+      = <mod><math>$p10 - 9</math> 12</mod>
+      = <mod><math>$p11 - 10</math> 12</mod> 
+      = <mod><math>$p12 - 11</math> 12</mod> 
+      </when>
+    </award>
+  </answer>
+</section>
+</section>

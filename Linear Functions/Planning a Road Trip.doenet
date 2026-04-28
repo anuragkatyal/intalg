@@ -1,0 +1,135 @@
+
+
+<section boxed><title>Warm up</title>
+
+
+
+  <setup>
+        <selectFromSequence name="coordinates" from="2" to="10" numToSelect="4"></selectFromSequence>
+        <selectFromSequence name="fudge" from="1" to="10" numToSelect="4"></selectFromSequence>
+        <selectFromSequence name="slope" from="2" to="8" numToSelect="3"></selectFromSequence>
+        <selectFromSequence name="yint" from="-10" to="-3" numToSelect="3"></selectFromSequence>
+        <selectFromSequence name="dependent" from="-10" to="-3"></selectFromSequence>
+        <selectFromSequence name="independent" from="2" to="10"></selectFromSequence>
+        <graph>
+          <point name="point1">($coordinates[1], $coordinates[2])</point>
+          <point name="point2">(<math simplify>$coordinates[1]+$fudge[1]</math>, <math simplify>$coordinates[2]+$fudge[2]</math>)</point>
+          <point name="point3">($coordinates[3], $coordinates[4])</point>
+          <point name="point4">(<math simplify>$coordinates[3]+$fudge[3]</math>, <math simplify>$coordinates[4]+$fudge[4]</math>)</point>
+          <line name="line" through="$point1 $point2"></line>
+          <line name="line2" through="$point3 $point4"></line>
+        </graph>
+      </setup>
+
+    <cascade revealAll>
+    <problem>Find the slope of the line passing through $point1 and $point2. 
+      
+      <p><answer name="warmup1" symbolicEquality>$line.slope</answer></p>
+    </problem>
+
+    <problem>Find the equation of the line with slope of <m>$slope[2]</m> and a <m>y-</m>intercept of <m>(0,$yint[1])</m>. Use <m>r</m> for the dependent variable and <m>s</m> as the independent variable. Write your equation in slope intercept form. 
+      <p><answer name="warmup2">r=$slope[2] s + $yint[1]</answer></p>
+      
+    </problem>
+    
+    <problem>Find the equation of the line passing through $point1 with a slope of <m>$line.slope</m>. Use <m>a</m> for the dependent variable and <m>b</m> as the independent variable. Write your equation in slope intercept form. 
+      <p><answer name="warmup3">a=$line.slope b + $line.yintercept</answer></p>
+      
+    </problem>
+    
+    <problem>Find the equation of the line passing through $point3 and $point4. Use <m>p</m> for the dependent variable and <m>q</m> as the independent variable. Write your equation in slope intercept form. 
+      <p><answer name="warmup4">p=$line2.slope q + $line2.yintercept</answer></p>
+      
+    </problem>
+    
+    <problem>Find the value of the dependent variable if the value of the independent variable in <m>p=<math simplify>$line2.slope q + $line2.yintercept</math></m>, is <m>$independent</m>.
+
+      <p><answer name="warmup5"><math simplify>$line2.slope*$independent + $line2.yintercept</math></answer></p>
+      
+    </problem>
+
+    <problem>Find the value of the independent variable if the value of the dependent variable in <m>p=<math simplify>$line2.slope q + $line2.yintercept</math></m>, is <m>$dependent</m>.
+
+      <p><answer name="warmup6"><math simplify>($dependent - $line2.yintercept)/$line2.slope</math></answer></p>
+
+    </problem>
+    </cascade>
+
+  
+</section>
+
+
+
+<section boxed><title>Planning a Road Trip</title>
+
+  You are planning a road trip for Thanksgiving Break across Florida. You want to compare the cost of gas for your car (Car A) with your friend’s hybrid (Car B). Both cars use gas at different rates, and you’ll build linear models to represent their total cost of gas, <m>C</m>, depending on the miles traveled, <m>m</m>.
+  <p>For Car A, the following data has been collected:</p>
+    <ul>
+      <li>Driving <m>100</m> miles costs $<m>20</m> on gas.</li>
+      <li>Driving <m>250</m> miles costs $<m>50</m> on gas.</li>
+    </ul>
+
+  <problems><title></title>
+  
+    <problem>What is the average cost of gas per mile traveled by Car A? Write your answer as a reduced fraction.
+      <p><answer symbolicEquality><math simplify>(50-20)/(250-100)</math></answer></p>
+    </problem>
+
+    <problem>Write the equation, in slope intercept form, for the total cost of gas, <m>C</m>, of <m>m</m> miles traveled by Car A.
+      <p><answer symbolicEquality>C=1/5 m</answer></p>
+    </problem>
+    
+    <problem>For Car B, the cost per mile has already been calculated as <m>\frac{3}{20}</m> dollars per mile. Also, just to start the engine and get on the road, there’s an initial $5 cost. Write the equation, in slope intercept form, for the total cost, <m>C</m>, of <m>m</m> miles traveled by Car B.
+  <p><answer symbolicEquality>C=3/20 m + 5</answer></p>
+    </problem>
+    
+    <problem>Your other friend’s truck costs $<m>200</m> for <m>40</m> miles and $<m>350</m> for <m>70</m> miles. Find the equation of the line, in slope intercept form, for the truck’s cost.
+      <p><answer symbolicEquality>C=5 m</answer></p>
+    </problem>
+
+    <problem>How much would it cost to travel <m>600</m> miles in Car A?
+      <p>$<answer symbolicEquality>120</answer></p>
+    </problem>
+
+    <problem>How much would it cost to travel <m>600</m> miles in Car B?
+      <p>$<answer symbolicEquality>95</answer></p>
+    </problem>
+
+    <problem>How much would it cost to travel <m>600</m> miles in the truck?
+      <p>$<answer symbolicEquality>3000</answer></p>
+    </problem>
+
+    <problem>How many miles can Car A travel for $<m>200</m>?
+      <p><answer symbolicEquality>1000</answer> miles</p>
+    </problem>
+
+    <problem>How many miles can Car B travel for $<m>200</m>?
+      <p><answer symbolicEquality>1300</answer> miles</p>
+    </problem>
+        
+    <problem>How many miles can the truck travel for $<m>200</m>?
+      <p><answer symbolicEquality>40</answer> miles</p>
+    </problem>
+
+    <problem>Based on the graphs of the equations shown below, what is the cost at the time that the vehicles have driven the same number of miles for the same cost?
+      <graph grid fixed xMin="-15" xMax="200" yMin="-10" yMax="50" fixAxes>
+        <xLabel><m>m</m></xLabel>
+        <yLabel><m>C</m></yLabel>
+        <legend>
+          <label><m>y=\frac{1}{5}x</m></label>
+          <label><m>y=\frac{3}{20}x+5</m></label>
+        </legend>
+        <line styleNumber="2">y=1/5x</line>
+        <line styleNumber="4">y=3/20x+5</line> 
+      </graph>
+      <p>$<answer>20</answer></p>
+    </problem>
+
+    <problem>Based on the graphs of the equations shown below, how many miles have been driven at the time that the vehicles have driven the same number of miles for the same cost
+      <p>$<answer>100</answer></p>
+    </problem>
+  </problems>
+
+</section>
+
+

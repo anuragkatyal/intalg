@@ -1,0 +1,231 @@
+<!-- 
+
+Course:    Intermediate Algebra
+Chapter:   #. Factoring Polynomials
+Section:   #. Factoring quadratics with a!=1
+Author:    Anurag Katyal, Spring 2025
+Contact:   anurag@whyoverhow.com 
+
+About the activity: 
+
+-->
+
+<setup>
+  <selectFromSequence name="const" from="1" to="10" numToSelect="6"></selectFromSequence>
+  <math name="a" extend="$const[1]"/>
+  <math name="b" extend="$const[2]"/>
+  <math name="c" extend="$const[3]"/>
+  <math name="d" extend="$const[4]"/>
+  <math name="e" extend="$const[5]"/>
+  <math name="f" extend="$const[6]"/>
+  <selectFromSequence name="const2" from="1" to="10" numToSelect="10"></selectFromSequence>
+  <math name="m" extend="$const2[1]"/>
+  <math name="n" extend="$const2[2]"/>
+  <math name="o" extend="$const2[3]"/>
+  <math name="p" extend="$const2[4]"/>
+  <math name="q" extend="$const2[5]"/>
+  <math name="r" extend="$const2[6]"/>
+  <math name="s" extend="$const2[7]"/>
+  <math name="t" extend="$const2[8]"/>
+  <math name="u" extend="$const2[9]"/>
+  <math name="v" extend="$const2[10]"/>
+  
+  <math name="q1" simplify>x^2 - $m x - $a x + $a*$m</math>
+  <math name="q2" simplify>x^2 - $n x - $b x + $n*$b</math>
+  <math name="q3" simplify>x^2 + $b x + $o x + $b*$o</math>
+  <math name="q4" simplify>x^2 + $a x + $p x + $a*$p</math>
+  <math name="q5" simplify>x^2 - $c x - $q x + $c*$q</math>
+  <math name="q6" simplify>x^2 - $d x - $r x + $d*$r</math>
+  <math name="q7" simplify>x^2 + $d x + $s x + $d*$s</math>
+  <math name="q8" simplify>x^2 + $c x + $t x + $c*$t</math>
+  <math name="q9" simplify>x^2 - $e x + $u x - $e*$u</math>
+  <math name="q10" simplify>x^2 - $f x - $v x + $f*$v</math>
+</setup>
+
+
+<!-- Testing
+
+<p>q1=$q1=(x-$a)(x-$m)</p>
+<p>q2=$q2=(x-$b)(x-$n)</p>
+<p>q3=$q3=(x+$b)(x+$o)</p>
+<p>q4=$q4=(x+$a)(x+$p)</p>
+<p>q5=$q5=(x-$c)(x-$q)</p>
+<p>q6=$q6=(x-$d)(x-$r)</p>
+<p>q7=$q7=(x+$d)(x+$s)</p>
+<p>q8=$q8=(x+$c)(x+$t)</p>
+<p>q9=$q9=(x-$e)(x+$u)</p>
+<p>q10=$q10=(x-$f)(x-$v)</p> -->
+
+<title>Factoring Crossword (<m>a=1</m>)</title>
+
+<!-- <table><title>Factoring Crossword</title> -->
+
+<aside><title>Instructions for Crossword</title>
+  <ol>
+    <li>Fill the grid with factors that match the provided clues. For instance, if the clue states, "Is a factor of <math simplify>x^2-$b^2</math>", the answer could either be <m>x + $b</m> or <m>x - $b</m>.</li>
+    <li>If the answer were <m>x + $b</m>, you should enter <m>x</m> in the first box, <m>+</m> in the middle box and <m>$b</m> in the third box.</li>
+    <li>Care must be taken to ensure that the filled-in factors intersect correctly both horizontally (Across) and vertically (Down). For instance, if you enter <m>x - $b</m> going down and <m>x + $d</m> going across, you've made a mistake somewhere as the signs in the middle boxes are different. They must both be positive or both be negative.
+  <tabular top="minor" bottom="minor" left="minor" right="minor" width="120">
+    <row>
+      <cell></cell>
+      <cell><m>x</m></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><m>x</m></cell>
+      <cell><m>\pm!</m></cell>
+      <cell><m>$d</m></cell>
+    </row>
+
+    <row>
+      <cell></cell>
+      <cell><m>$b</m></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+    
+    The correct solution could be <m>x + $b</m> and <m>x + $d</m>:
+
+      <tabular top="minor" bottom="minor" left="minor" right="minor" width="120">
+    <row>
+      <cell></cell>
+      <cell><m>x</m></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><m>x</m></cell>
+      <cell><m>+</m></cell>
+      <cell><m>$d</m></cell>
+    </row>
+
+    <row>
+      <cell></cell>
+      <cell><m>$b</m></cell>
+      <cell></cell>
+    </row>
+  </tabular>
+    </li>
+  </ol>
+
+</aside>
+
+<sideBySide widths="40% 60%">
+
+  <div>
+  <p><alert>Across</alert></p>
+  <p>2. Is a factor of $q1</p>
+  <p>4. Is a factor of $q3</p>
+  <p>6. Is a factor of $q5</p>
+  <p>8. Is a factor of $q7</p>
+  <p>10. Is a factor of $q9</p>
+
+  <p><alert>Down</alert></p>
+  <p>1. Is a factor of $q2</p>
+  <p>3. Is a factor of $q4</p>
+  <p>5. Is a factor of $q6</p>
+  <p>7. Is a factor of $q8</p>
+  <p>9. Is a factor of $q10</p>
+  </div>
+
+  <div>
+  <tabular top="minor" bottom="minor" left="minor" right="minor" width="430">
+  
+    <row>
+      <cell></cell>
+      <cell>1<mathInput name="entry12" minWidth="25"></mathInput></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell>2<mathInput name="entry21" minWidth="25"></mathInput></cell>
+      <cell><m>~~</m><mathInput name="entry22" minWidth="25"></mathInput></cell>
+      <cell>3<mathInput name="entry23" minWidth="25"></mathInput></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell></cell>
+      <cell>4<mathInput name="entry32" minWidth="25"></mathInput></cell>
+      <cell><m>~~</m><mathInput name="entry33" minWidth="25"></mathInput></cell>
+      <cell>5<mathInput name="entry34" minWidth="25"></mathInput></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell></cell>
+      <cell></cell>
+      <cell>6<mathInput name="entry43" minWidth="25"></mathInput></cell>
+      <cell><m>~~</m><mathInput name="entry44" minWidth="25"></mathInput></cell>
+      <cell>7<mathInput name="entry45" minWidth="25"></mathInput></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell>8<mathInput name="entry54" minWidth="25"></mathInput></cell>
+      <cell><m>~~</m><mathInput name="entry55" minWidth="25"></mathInput></cell>
+      <cell>9<mathInput name="entry56" minWidth="25"></mathInput></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell>10<mathInput name="entry65" minWidth="25"></mathInput></cell>
+      <cell><m>~~</m><mathInput name="entry66" minWidth="25"></mathInput></cell>
+      <cell><m>~~</m><mathInput name="entry67" minWidth="25"></mathInput></cell>
+    </row>
+
+    <row>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell><m>~~</m><mathInput name="entry76" minWidth="25"></mathInput></cell>
+      <cell></cell>
+    </row>
+
+  </tabular>
+
+<answer>
+  <award>
+    <when>
+      $entry12=x and
+      $entry21=x and
+      $entry22=- and
+      $entry23=$a and
+      $entry32=$b and
+      $entry33=+ and
+      $entry34=x and
+      $entry43=x and
+      $entry44=- and
+      $entry45=$c and
+      $entry54=$d and
+      $entry55=+ and
+      $entry56=x and
+      $entry65=x and
+      $entry66=- and
+      $entry67=$e and
+      $entry76=$f 
+    </when>
+  </award>
+</answer>
+  </div>
+</sideBySide>

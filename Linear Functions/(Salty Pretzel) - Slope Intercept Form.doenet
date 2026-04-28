@@ -1,0 +1,226 @@
+<title>Slope Intercept Form</title>
+
+<aside boxed>
+  <title>
+    Instructions for Pretzel
+  </title>
+   
+  <ul>
+    <li>Start anywhere and enter 1 in the box next to the first problem you choose to solve.</li> 
+    <li>Search the activity for your answer. When you find it, enter 2 in that problem's box — it becomes problem 2. Continue until you return to your first problem, completing the loop.</li> 
+    <li>Some problems are <em>distractors</em> — their answers do not appear anywhere in the activity. Mark an X in the box for any distractor you find. You must correctly identify all distractors to complete the activity.</li>
+    <li>If the first problem you solve is a distractor, pick a new problem and enter 1 in the box next to it.</li>
+    <li>There is only one correct path.</li>
+    <li>Happy solving!</li>
+  </ul>
+    
+</aside>
+
+<section includeAutoNameIfNoTitle = "false" includeAutoNumberIfNoTitle = "false" boxed><title>Slope Intercept Form</title>
+  <p>The equation of a line in slope intercept form is <m>y=mx+b</m> where <m>m</m> is the slope and <m>b</m> is the <m>y</m> intercept of the line.</p>
+</section>
+
+<setup>
+  <selectFromSequence name="a" from="-5" to="5" exclude="0" numToSelect="3"/>
+  <selectFromSequence name="slopeSetup" coprime from="2" to="9" numToSelect="4"/>
+  <math name="slope1">$slopeSetup[1]/$slopeSetup[2]</math>
+  <math name="slope2" simplify="numberspreserveorder">-1*$slopeSetup[1]/$slopeSetup[2]</math>
+  <math name="slope3" simplify="numberspreserveorder">$slopeSetup[3]/$slopeSetup[4]</math>
+</setup>
+
+<pretzel name="pretzel1" maxNumColumns="2">
+
+  <!-- problem 1 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5"/>
+      </setup>
+      What is the equation of the line graphed below?
+      <graph size="small" showNavigation="true" grid>
+        <shortDescription>The graph of a horizontal line passing through the point ($b, $a).</shortDescription>
+        <line fixed>y=$a[1]</line>
+      </graph>
+    </statement>
+    <answer>
+      <m>y=$a[1]</m>
+    </answer>
+  </problem>
+
+  <!-- problem 2 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="int" from="6" to="10" numToSelect="2"/>
+      </setup>
+      Find the equation of the line with an <m>x</m>-intercept of <m>$int[1]</m> and a <m>y</m>-intercept of <m>$int[2]</m>.
+    </statement>
+    <answer>
+      <math simplify="numberspreserveorder">y=($int[2])/(-$int[1]) x + $int[2]</math>
+    </answer>
+  </problem>
+
+  <!-- problem 3 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5" exclude="0"/>
+      </setup>
+      What is the equation of the line graphed below?
+      <graph size="small" grid>
+        <line fixed>y=$slope1 x + $b</line>
+      </graph>
+    </statement>
+    <answer>
+      <math simplify="numberspreserveorder">y=$slope1 x + $b</math>
+    </answer>
+  </problem>
+
+  <!-- problem 4 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="35000" to="40000" step="40"/>
+        <selectFromSequence name="delta" from="5050" to="10000" step="90"/>
+        <selectFromSequence name="year" from="2010" to="2020"/>
+        <math name="const2" simplify>$const-$delta</math>
+        <math name="slope" simplify ><round numDecimals="2">-$delta/(2026-$year)</round></math>
+      </setup>
+      A local environmental group set aside <m>$ $const</m> in $year to help restore coral reefs along the Florida Keys. The group spent the same amount from that fund each year on restoration efforts. In 2026, there was <m>$ $const2</m> left in the fund. Find the equation of the line that relates the amount of money (<m>y</m>) the group has spent from this fund since $year (<m>x</m>).
+    </statement>
+    <answer>
+      <math simplify="numberspreserveorder">y=$slope x + $const</math>
+    </answer>
+  </problem>
+
+  <!-- problem 5 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5" numToSelect="2"/>
+      </setup>
+      Find the equation of the line passing through <m>($a[3],$b[1])</m> and <m>($a[3],$b[2])</m>.
+    </statement>
+    <answer>
+      <m>x=$a[3]</m>
+    </answer>
+  </problem>
+
+  <!-- problem 6 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="toppings" from="5" to="9"/>
+        <function name="cost">$toppings x + 14</function>
+      </setup>
+      A pizza restaurant charges a flat delivery fee plus a set cost per topping added to a pizza. The table below shows the total cost (<m>y</m>) based on the number of toppings (<m>x</m>). Find the equation of the line that relates cost with the number of toppings. 
+
+      <me>\begin{array}{|c|c|}
+\hline \text { toppings }(x) & \text { total cost }(y) \\
+\hline 0 & \$ $$cost(0) \\
+\hline 1 & \$ $$cost(1) \\
+\hline 2 & \$ $$cost(2) \\
+\hline 3 & \$ $$cost(3) \\
+\hline 4 & \$ $$cost(4) \\
+\hline
+\end{array}</me>
+    </statement>
+    <answer>
+      <math simplify="numberspreserveorder">y=$cost</math>
+    </answer>
+  </problem>
+
+  <!-- problem 7 -->
+    <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5" numToSelect="2"/>
+      </setup>
+      Find the equation of the line passing through <m>($b[1],$a[3])</m> and <m>($b[2],$a[3])</m>.
+    </statement>
+    <answer>
+      <m>y=$a[3]</m>
+    </answer>
+  </problem>
+
+  <!-- problem 8 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5"/>
+      </setup>
+      What is the equation of the line graphed below?
+      <graph size="small" showNavigation="true" grid>
+        <shortDescription>The graph of a vertical line passing through the point ($a, $b).</shortDescription>
+        <line fixed>x=$a[2]</line>
+      </graph>
+    </statement>
+    <answer>
+      <m>x=$a[2]</m>
+    </answer>
+  </problem>
+
+  <!-- problem 9 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="-5" to="5" exclude="0"/> 
+      </setup>
+      Rewrite <m>-$slopeSetup[3] x + $slopeSetup[4] y = $const</m> in slope-intercept form. 
+    </statement>
+    <answer>
+      <math simplify="numberspreserveorder">y=$slope3 x + $const/$slopeSetup[4]</math>
+    </answer>
+  </problem>
+
+  <!-- problem 10 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5" exclude="0"/>
+      </setup>
+      What is the equation of the line graphed below?
+      <graph size="small" grid>
+        <line fixed>y=$slope2 x + $b</line>
+      </graph>
+    </statement>
+    <answer>
+      <math simplify="numberspreserveorder">y=$slope2 x + $b</math>
+    </answer>
+  </problem>
+
+  <!-- problem 11 -->
+  <problem isDistractor>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5"/>
+      </setup>
+      What is the equation of the line graphed below?
+      <graph size="small" showNavigation="true" grid>
+        <shortDescription>The graph of a horizontal line passing through the point ($b, $a).</shortDescription>
+        <line fixed>y=$a[1]</line>
+      </graph>
+    </statement>
+    <answer>
+      <m>x=$a[1]</m>
+    </answer>
+  </problem>
+
+  <!-- problem 12 -->
+  <problem isDistractor>
+    <statement>
+      <setup>
+        <selectFromSequence name="b" from="-5" to="5"/>
+      </setup>
+      What is the equation of the line graphed below?
+      <graph size="small" showNavigation="true" grid>
+        <shortDescription>The graph of a vertical line passing through the point ($a, $b).</shortDescription>
+        <line fixed>x=$a[2]</line>
+      </graph>
+    </statement>
+    <answer>
+      <m>y=$a[2]</m>
+    </answer>
+  </problem>
+  
+</pretzel>

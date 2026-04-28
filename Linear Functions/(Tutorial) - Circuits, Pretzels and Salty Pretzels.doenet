@@ -1,0 +1,271 @@
+<title>Solving Linear Equations in One Variable</title>
+
+<em>This activity will reveal content as you move through it.</em>
+
+<cascade revealAll boxAll>
+
+<section>
+  <title>Introduction to Circuits</title>
+  <aside>
+    <title>
+      Instructions for Circuits
+    </title>
+     
+    <ul>
+      <li>Start by solve the top left problem marked 1.</li> 
+      <li>Search the activity for the answer you came up with. When you find it, enter 2 in that problem's box — it becomes problem 2. Continue until you return to the first problem, completing the loop.</li> 
+      <li>There is only one correct path and it passes through all the problems.</li>
+      <li>Happy solving!</li>
+    </ul>
+      
+  </aside>
+  
+  
+  <setup>
+    <selectFromSequence name="finalAns" from="2" to="10" numToSelect="6"></selectFromSequence>
+    <selectFromSequence name="a" from="2" to="10" numToSelect="6"/>
+    <math name="b1" simplify>$a[1] + $finalAns[1]</math>
+    <math name="b2" simplify>-$a[2] + $finalAns[2]</math>
+    <math name="b3" simplify>$a[3]*$finalAns[3]</math>
+    <math name="b4" simplify>$finalAns[4]/$a[4]</math>
+    <math name="b5" simplify>$a[5] + $finalAns[5]</math>
+    <math name="b6" simplify>-$a[6] + $finalAns[6]</math>
+  </setup>
+  
+  <pretzel name="pretzel1" maxNumColumns="2" mode="circuit">
+  
+    <!-- problem 1 -->
+    <problem>
+      <statement>
+        Solve <m>x + $a[1] = $b1</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[1]</m>
+      </answer>
+    </problem>
+  
+    <!-- problem 2 -->
+    <problem>
+      <statement>
+        Solve <m>x - $a[2] = $b2</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[2]</m>
+      </answer>
+    </problem>
+  
+    <!-- problem 3 -->
+    <problem>
+      <statement>
+        Solve <m>$a[3] x = $b3</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[3]</m>  
+      </answer>
+    </problem>
+  
+    <!-- problem 4 -->
+    <problem>
+      <statement>
+        Solve <m>\frac{x}{$a[4]} = $b4</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[4]</m>
+      </answer>
+    </problem>
+
+    <!-- problem 5 -->
+    <problem>
+      <statement>
+        Solve <m>x + $a[5] = $b5</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[5]</m>
+      </answer>
+    </problem>
+
+    <!-- problem 6 -->
+    <problem>
+      <statement>
+        Solve <m>x - $a[6] = $b6</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[6]</m>
+      </answer>
+    </problem>
+    
+  </pretzel>
+</section>
+
+
+  
+<section>
+  <title>Introduction to Pretzels</title>
+  <aside>
+    <title>
+      Instructions for Pretzel
+    </title>
+     
+    <ul>
+      <li>Start anywhere and enter 1 in the box next to the first problem you choose to solve.</li> 
+      <li>Search the activity for the answer you came up with. When you find it, enter 2 in that problem's box — it becomes problem 2. Continue until you return to your first problem, completing the loop.</li> 
+      <li>There is only one correct path.</li>
+      <li>Happy solving!</li>
+    </ul>
+      
+  </aside>
+  
+  
+  <setup>
+    <selectFromSequence name="finalAns" from="2" to="10" numToSelect="6"></selectFromSequence>
+    <selectFromSequence name="a" from="2" to="10" numToSelect="4"/>
+    <selectFromSequence name="c" from="2" to="10" numToSelect="4"/>
+    <math name="b1" simplify>$a[1] + $c[1]*$finalAns[1]</math>
+    <math name="b2" simplify>-$a[2] + $c[2]*$finalAns[2]</math>
+    <math name="b3" simplify>$c[3]*($a[3]+$finalAns[3])</math>
+    <math name="b4" simplify>($finalAns[4]-$c[4])/$a[4]</math>
+  </setup>
+  
+  <pretzel name="pretzel2" maxNumColumns="2">
+  
+    <!-- problem 1 -->
+    <problem>
+      <statement>
+        Solve <m>$c[1] x + $a[1] = $b1</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[1]</m>
+      </answer>
+    </problem>
+  
+    <!-- problem 2 -->
+    <problem>
+      <statement>
+        Solve <m>$c[2]x - $a[2] = $b2</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[2]</m>
+      </answer>
+    </problem>
+  
+    <!-- problem 3 -->
+    <problem>
+      <statement>
+        Solve <m>$c[3] (x + $a[3])= $b3</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[3]</m>  
+      </answer>
+    </problem>
+  
+    <!-- problem 4 -->
+    <problem>
+      <statement>
+        Solve <m>\frac{x-$c[4]}{$a[4]} = $b4</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[4]</m>
+      </answer>
+    </problem>
+    
+  </pretzel>
+</section>
+
+
+<section>
+  <title>Introduction to Pretzels with Toppings</title>
+  <aside>
+    <title>
+      Instructions for Pretzel with Toppings
+    </title>
+     
+    <ul>
+      <li>Start anywhere and enter 1 in the box next to the first problem you choose to solve.</li> 
+      <li>Search the activity for the answer you came up with. When you find it, enter 2 in that problem's box — it becomes problem 2. Continue until you return to your first problem, completing the loop.</li> 
+      <li>Some problems are <em>distractors</em> — their answers do not appear anywhere in the activity. Mark an X in the box for any distractor you find. You must correctly identify all distractors to complete the activity.</li>
+      <li>If the first problem you solve is a distractor, pick a new problem and enter 1 in the box next to it.</li>
+      <li>There is only one correct path.</li>
+      <li>Happy solving!</li>
+    </ul>
+      
+  </aside>
+  
+  
+  <setup>
+    <selectFromSequence name="finalAns" from="2" to="10" numToSelect="6"></selectFromSequence>
+    <selectFromSequence name="a" from="2" to="10" numToSelect="6"/>
+    <math name="b1" simplify>$a[1] + $finalAns[1]</math>
+    <math name="b2" simplify>-$a[2] + $finalAns[2]</math>
+    <math name="b3" simplify>$a[3]*$finalAns[3]</math>
+    <math name="b4" simplify>$finalAns[4]/$a[4]</math>
+    <math name="b5" simplify>$a[5] + $finalAns[5]</math>
+    <math name="b6" simplify>-$a[6] + $finalAns[6]</math>
+  </setup>
+  
+  <pretzel name="pretzel3" maxNumColumns="2">
+  
+    <!-- problem 1 -->
+    <problem>
+      <statement>
+        Solve <m>x + $a[1] = $b1</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[1]</m>
+      </answer>
+    </problem>
+  
+    <!-- problem 2 -->
+    <problem>
+      <statement>
+        Solve <m>x - $a[2] = $b2</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[2]</m>
+      </answer>
+    </problem>
+  
+    <!-- problem 3 -->
+    <problem>
+      <statement>
+        Solve <m>$a[3] x = $b3</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[3]</m>  
+      </answer>
+    </problem>
+  
+    <!-- problem 4 -->
+    <problem>
+      <statement>
+        Solve <m>\frac{x}{$a[4]} = $b4</m>
+      </statement>
+      <answer>
+        <m>x=$finalAns[4]</m>
+      </answer>
+    </problem>
+  
+    <!-- problem 5 -->
+    <problem isDistractor>
+      <statement>
+        Solve <m>x + $a[5] = $b5</m>
+      </statement>
+      <answer>
+        <m>x=<math simplify>$finalAns[5]+10</math></m>
+      </answer>
+    </problem>
+  
+    <!-- problem 6 -->
+    <problem isDistractor>
+      <statement>
+        Solve <m>x - $a[6] = $b6</m>
+      </statement>
+      <answer>
+        <m>x=<math simplify>$finalAns[6]+15</math></m>
+      </answer>
+    </problem>
+    
+  </pretzel>
+</section>
+  
+</cascade>
+

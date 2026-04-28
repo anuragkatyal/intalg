@@ -1,0 +1,205 @@
+<title>Point Slope Form</title>
+
+<aside boxed>
+  <title>
+    Instructions for Pretzel
+  </title>
+   
+  <ul>
+    <li>Start anywhere and enter 1 in the box next to the first problem you choose to solve.</li> 
+    <li>Search the activity for your answer. When you find it, enter 2 in that problem's box — it becomes problem 2. Continue until you return to your first problem, completing the loop.</li> 
+    <li>Some problems are <em>distractors</em> — their answers do not appear anywhere in the activity. Mark an X in the box for any distractor you find. You must correctly identify all distractors to complete the activity.</li>
+    <li>If the first problem you solve is a distractor, pick a new problem and enter 1 in the box next to it.</li>
+    <li>There is only one correct path.</li>
+    <li>Happy solving!</li>
+  </ul>
+    
+</aside>
+
+<section includeAutoNameIfNoTitle = "false" includeAutoNumberIfNoTitle = "false" boxed><title>Point Slope Form</title>
+  <p>The equation of a line in point slope form is <m>y-y_1=m(x-x_1)</m> where <m>m</m> is the slope, <m>x_1</m> and <m>y_1</m> are the coordinates of the point, <m>(x_1,y_1)</m>, on the line.</p>
+</section>
+
+<setup>
+  <selectFromSequence name="slope" from="-7" to="7" exclude="-1 0 1" numToSelect="7"/>
+  <selectFromSequence name="slopeDis" from="8" to="11" exclude="-1 0 1" numToSelect="4"/>
+  <selectFromSequence name="coords" from="-7" to="7" numToSelect="2" exclude="0"/>
+  <selectFromSequence name="fudge" from="-4" to="4" exclude="0" numToSelect="7"/>
+  <math name="x1" extend="$coords[1]"/>
+  <math name="y1" extend="$coords[2]"/>
+  <math name="x2" simplify>-1*$x1</math>
+  <math name="y2" simplify>-1*$y1</math>
+  <math name="x3" simplify>$x2+$fudge[1]</math>
+  <math name="y3" simplify>$y2-$fudge[1]</math>
+</setup>
+
+<pretzel name="pretzel1" maxNumColumns="2">
+
+  <!-- problem 1 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="coords" from="-5" to="5" numToSelect="2" exclude="0"/>
+      </setup>
+      Find the equation of a line passing through <m>($x1, $y1)</m> with slope <m>m=$slope[1]</m>, in point slope form.
+      <!-- <p>$ans1</p>       -->
+    </statement>
+    <answer>
+      <math name="ans1" simplify="numberspreserveorder">y-$y1=$slope[1](x-$x1)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 2 -->
+  <problem>
+    <statement>
+      <setup>
+        <math name="coords3" simplify>$x2+$fudge[2]</math>
+        <math name="coords4" simplify>$y2+$fudge[2]*$slope[2]</math>
+      </setup>
+      Find the equation of a line passing through <m>($x2, $y2)</m> and <m>($coords3, $coords4)</m>, in point slope form.
+    <!-- <p>$ans2</p>       -->
+    </statement>
+    <answer>
+      <math name="ans2" simplify="numberspreserveorder">y-$y2=$slope[2](x-$x2)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 3 -->
+  <problem>
+    <statement>
+      <setup>
+        <math name="coords3" simplify>$x1+$fudge[3]</math>
+        <math name="coords4" simplify>$y1+$fudge[3]*$slope[3]</math>
+      </setup>
+      Find the equation of a line graphed below, in point slope form. You may need to zoom in or out of the graph to see both points. 
+      <graph size="small" displayXAxisTickLabels="false" displayYAxisTickLabels="false">
+        <line fixed through="($x1, $y1) ($coords3, $coords4)"/> 
+        <point fixed><label>($x1, $y1)</label>($x1, $y1)</point>
+        <point fixed><label>($coords3, $coords4)</label>($coords3, $coords4)</point>
+      </graph>
+      <!-- <p>$ans3</p> -->
+    </statement>
+    <answer>
+      <math name="ans3" simplify="numberspreserveorder">y-$coords4=$slope[3](x-$coords3)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 4 -->
+  <problem>
+    <statement>
+      Find the equation of a line, in point slope form, with slope <m>m=$slope[4]</m> passing through the point that <math simplify="numberspreserveorder">y-$y2=$slope[1](x-$x2)</math> also passes through.  
+      <!-- <p>$ans4</p> -->
+    </statement>
+    <answer>
+      <math name="ans4" simplify="numberspreserveorder">y-$y2=$slope[4](x-$x2)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 5 -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="-5" to="5"/>
+      </setup>
+      Find the equation of a line, in point slope form, passing through <m>($x3,$y3)</m> that has the same slope as the line, <math simplify="numberspreserveorder">-$slope[5]x+y=$const</math>.
+      <!-- <p>$ans5</p> -->
+    </statement>
+    <answer>
+      <math name="ans5" simplify="numberspreserveorder">y-$y3=$slope[5](x-$x3)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 6 -->
+  <problem>
+    <statement>
+      <setup>
+        <math name="coords3" simplify>$x2-$fudge[4]</math>
+        <math name="coords4" simplify>$y2-$fudge[4]*$slope[6]</math>
+      </setup>
+      Find the equation of a line graphed below, in point slope form. You may need to zoom in or out of the graph to see both points. 
+      <graph size="small" displayXAxisTickLabels="false" displayYAxisTickLabels="false">
+        <line fixed through="($x2, $y2) ($coords3, $coords4)"/> 
+        <point fixed><label>($x2, $y2)</label>($x2, $y2)</point>
+        <point fixed><label>($coords3, $coords4)</label>($coords3, $coords4)</point>
+      </graph>
+      <!-- <p>$ans6</p> -->
+    </statement>
+    <answer>
+      <math name="ans6" simplify="numberspreserveorder">y-$y2=$slope[6](x-$x2)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 7 -->
+  <problem isDistractor>
+    <statement>
+      <setup>
+        <math name="coords3" simplify>$x2+$fudge[5]</math>
+        <math name="coords4" simplify>$y2+$fudge[5]*$slopeDis[1]</math>
+      </setup>
+      Find the equation of a line passing through <m>($x2, $y2)</m> and <m>($coords3, $coords4)</m>, in point slope form.
+      <!-- <p>$ans7</p> -->
+    </statement>
+    <answer>
+      <math name="ans7" simplify="numberspreserveorder">y+$coords4=$slope[2](x+$coords3)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 8 -->
+  <problem isDistractor>
+    <statement>
+      <setup>
+        <math name="coords3" simplify>$x1+$fudge[6]</math>
+        <math name="coords4" simplify>$y1+$fudge[6]*$slopeDis[2]</math>
+      </setup>
+      Find the equation of a line graphed below, in point slope form. You may need to zoom in or out of the graph to see both points. 
+      
+      <graph size="small">
+        <line fixed through="($x1, $y1) ($coords3, $coords4)"/> 
+        <point fixed><label>($x1, $y1)</label>($x1, $y1)</point>
+        <point fixed><label>($coords3, $coords4)</label>($coords3, $coords4)</point>
+      </graph>
+      <!-- <p>$ans8</p> -->
+    </statement>
+    <answer>
+      <math name="ans8" simplify="numberspreserveorder">y-$coords4=$slope[4](x+$coords3)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 9 -->
+  <problem isDistractor>
+    <statement>
+      <setup>
+        <selectFromSequence name="const" from="-5" to="5"/>
+      </setup>
+      Find the equation of a line, in point slope form, passing through <m>($x2,$y2)</m> that has the same slope as the line, <math simplify="numberspreserveorder">$slopeDis[3]x+y=$const</math>.
+      <!-- <p>$ans9</p> -->
+      
+    </statement>
+    <answer>
+      <math name="ans9" simplify="numberspreserveorder">y+$y3=$slope[5](x-$x3)</math>
+    </answer>
+  </problem>
+
+  <!-- problem 10 -->
+  <problem isDistractor>
+    <statement>
+      <setup>
+        <math name="coords3" simplify>$x2-$fudge[7]</math>
+        <math name="coords4" simplify>$y2-$fudge[7]*$slopeDis[4]</math>
+      </setup>
+      Find the equation of a line graphed below, in point slope form. You may need to zoom in or out of the graph to see both points. 
+      <graph size="small" displayXAxisTickLabels="false" displayYAxisTickLabels="false">
+        <line fixed through="($x2, $y2) ($coords3, $coords4)"/> 
+        <point fixed><label>($x2, $y2)</label>($x2, $y2)</point>
+        <point fixed><label>($coords3, $coords4)</label>($coords3, $coords4)</point>
+      </graph>
+      <!-- <p>$ans10</p> -->
+    </statement>
+    <answer>
+      <math name="ans10" simplify="numberspreserveorder">y-$y2=$slope[6](x+$x2)</math>
+    </answer>
+  </problem>
+
+  
+  
+</pretzel>

@@ -1,0 +1,113 @@
+<!-- **********************************************************************
+
+Course:    Intermediate Algebra/Algebra I
+Chapter:   Linear Equations
+Section:   System of Linear Equations
+Author:    Anurag Katyal, Fall 2023
+Contact:   anurag@whyoverhow.com
+
+I'd love feedback on the activity or suggestions for improving the activity. 
+
+About the activity: An activity on a graphical approach to solving systems of linear equations.
+
+********************************************************************** -->
+
+<title>System of Linear Equations</title>
+
+<section boxed><title>Let's Take a Walk</title>
+<p>Joel and Ellie can walk <m>2</m> miles on each rainy day and <m>3</m> miles on each dry day. During the summer, they experienced <m>8</m> more rainy days than dry days and walked a total of <m>36</m> miles.</p>
+  <problem>What are the two variables or unknown quantities in this problem? 
+      <answer maxNumAttempts="2">
+          <choice>The number of rainy days and miles walked on each rainy day.</choice>
+          <choice>The number of dry days and miles walked on each dry day.</choice>
+          <choice credit="1">The number of rainy days and the number of dry days.</choice>
+          <choice> The number of miles walked on each rainy day and the number of miles walked on each dry day.</choice>
+      </answer>
+  </problem>
+  
+  <problem><p>Choose a suitable variable for the number of rainy days.
+      <mathInput name="rainyDays"></mathInput></p>
+      <p>Choose a suitable variable for the number of dry days.
+      <mathInput name="dryDays"></mathInput></p>
+      <p>If Joel and Ellie experienced <m>8</m> more rainy days than dry days, what equation would relate the number of rainy and dry days? Remember to use the variables you chose above! <answer symbolicEquality simplifyOnCompare name="eq1">$rainyDays=8+$dryDays</answer></p>
+  </problem>
+
+  <problem>
+      <p>If Joel and Ellie walk <m>2</m> miles on each rainy day, how many miles would they walk in <m>5</m> rainy days? <answer>10</answer></p>
+      <p>How many miles would they walk in <m>8</m> rainy days? <answer>16</answer></p>
+      <p>How many miles would they walk in $rainyDays rainy days? <answer name="totalRainyDays">2$rainyDays</answer></p>
+  </problem>
+  
+  <problem>
+      <p>If Joel and Ellie walk <m>3</m> miles on each dry day, how many miles would they walk in <m>4</m> dry days? <answer>12</answer></p>
+      <p>How many miles would they walk in <m>9</m> dry days? <answer>27</answer></p>
+      <p>How many miles would they walk in $dryDays dry days? <answer name="totalDryDays">3$dryDays</answer></p>
+  </problem>
+
+  <problem>
+      <p>If Joel and Ellie walked a total of <m>36</m> miles, what equation would relate the number of miles walked on rainy and dry days? Remember to use the variables you chose above! <answer symbolicEquality simplifyOnCompare name="eq2">3$dryDays+2$rainyDays=36</answer></p>
+  </problem>
+
+  <problem><p>Drag the points on the <alert>orange</alert> line to graph the <alert>first</alert> equation you created.</p> 
+    <p>Drag the points on the <alert>red</alert> line to graph the <alert>second</alert> equation you created.</p> 
+    <em>Note that the number of rainy days is on the vertical axis and the number of dry days is on the horizontal axis.</em> 
+    <div>
+    <graph name="g1" grid="1 1" xmin="-5" xmax="25" ymin="-5" ymax="25">
+      <xLabel>dry days</xLabel>
+      <yLabel>rainy days</yLabel>
+      <point name="dp1" styleNumber="5">(5,10)
+         <constrainToGrid dx="1" dy="1"/>  
+      </point>
+      <point name="dp2" styleNumber="5">(8,10)
+         <constrainToGrid dx="1" dy="1"/>  
+      </point>
+      <line name="userLine1" styleNumber="3" through="$dp1 $dp2"><label>First Equation</label></line>
+      <line name="correctLine1" styleNumber="2" hide>y=8+x</line>
+      
+      <point name="dp3" styleNumber="5">(5,4)
+         <constrainToGrid dx="1" dy="1"/>  
+      </point>
+      <point name="dp4" styleNumber="5">(8,4)
+         <constrainToGrid dx="1" dy="1"/>  
+      </point>
+      <line name="userLine2" styleNumber="2" through="$dp3 $dp4"><label>Second Equation</label></line>
+      <line name="correctLine2" styleNumber="4" hide>3x+2y=36</line>
+    </graph>
+
+    <answer name="ans2">
+      <award><when>$userLine1 = $correctLine1 and $userLine2= $correctLine2</when></award>
+    </answer>
+    </div>
+  </problem>
+
+  <problem>Based on the graph above, how many rainy days did Joel and Ellie experience? <answer>12</answer>
+    Based on the graph above, how many dry days did Joel and Ellie experience? <answer>4</answer>
+  </problem>
+</section>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
