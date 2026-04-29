@@ -25,6 +25,17 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
   <p>To solve a radical equation, isolate the radical and raise both sides to the appropriate power. For <em>even</em>-index radicals (e.g., square roots), always check your answer(s) for extraneous solutions.</p>
 </section>
 
+<setup>
+  <!-- Pick all non-distractor solutions once so each answer appears exactly once. -->
+  <selectFromSequence name="solution1" from="1" to="5"/>
+  <selectFromSequence name="solution2" from="1" to="5" exclude="$solution1"/>
+  <selectFromSequence name="solution4" from="1" to="5" exclude="$solution1 $solution2"/>
+  <selectFromSequence name="solution3" from="1" to="6" exclude="$solution1 $solution2 $solution4"/>
+  <selectFromSequence name="solution6" from="3" to="7" exclude="$solution1 $solution2 $solution3 $solution4"/>
+  <selectFromSequence name="solution5" from="3" to="10" exclude="$solution1 $solution2 $solution3 $solution4 $solution6"/>
+  <selectFromSequence name="solution7" from="-5" to="-1"/>
+</setup>
+
 <pretzel name="pretzel1" maxNumColumns="2">
 
   <!-- ═══════════════════════════════════════════════════════════════
@@ -40,7 +51,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
     <statement>
       <setup>
         <selectFromSequence name="c1" from="2" to="4"/>
-        <selectFromSequence name="n1" from="1" to="5"/>
+        <math name="n1" extend="$solution1"/>
         <selectFromSequence name="a1" from="2" to="4"/>
         <math name="b1" simplify>$c1^2 - $a1 * $n1</math>
         <math name="radicand1" simplify>$a1 x + $b1</math>
@@ -63,7 +74,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
     <statement>
       <setup>
         <selectFromSequence name="c2" from="2" to="4"/>
-        <selectFromSequence name="n2" from="1" to="5"/>
+        <math name="n2" extend="$solution2"/>
         <selectFromSequence name="a2" from="2" to="4"/>
         <math name="b2" simplify>$c2^2 - $a2 * $n2</math>
         <math name="radicand2" simplify>$a2 x + $b2</math>
@@ -89,7 +100,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
         <selectFromSequence name="c3mag" from="2" to="3"/>
         <selectFromSequence name="c3sign" from="-1" to="1" step="2"/>
         <math name="c3" simplify>$c3sign * $c3mag</math>
-        <selectFromSequence name="n3" from="1" to="6"/>
+        <math name="n3" extend="$solution3"/>
         <selectFromSequence name="a3" from="1" to="2"/>
         <math name="b3" simplify>$c3^3 - $a3 * $n3</math>
         <math name="radicand3" simplify>$a3 x + $b3</math>
@@ -121,7 +132,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
   <problem>
     <statement>
       <setup>
-        <selectFromSequence name="n4" from="1" to="5"/>
+        <math name="n4" extend="$solution4"/>
         <selectFromSequence name="k4" from="1" to="2"/>
         <selectFromSequence name="a4" from="1" to="2"/>
         <math name="c4" simplify>$n4 + $k4</math>
@@ -156,7 +167,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
       <setup>
         <selectFromSequence name="a5" from="3" to="4"/>
         <selectFromSequence name="c5" from="1" to="2"/>
-        <selectFromSequence name="n5" from="3" to="10"/>
+        <math name="n5" extend="$solution5"/>
         <selectFromSequence name="d5" from="2" to="6"/>
         <math name="b5" simplify>$d5 - ($a5 - $c5) * $n5</math>
         <math name="leftRad5" simplify>$a5 x + $b5</math>
@@ -189,7 +200,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
   <problem>
     <statement>
       <setup>
-        <selectFromSequence name="n6" from="3" to="7"/>
+        <math name="n6" extend="$solution6"/>
         <math name="b6" simplify>16 - 2*$n6</math>
         <math name="d6" simplify>9 - $n6</math>
         <math name="leftRad6" simplify>2 x + $b6</math>
@@ -223,7 +234,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
   <problem>
     <statement>
       <setup>
-        <selectFromSequence name="n7" from="-5" to="-1"/>
+        <math name="n7" extend="$solution7"/>
         <selectFromSequence name="a7" from="2" to="3"/>
         <math name="b7" simplify>-$a7 * $n7</math>
         <math name="d7" simplify>1 - $n7</math>
