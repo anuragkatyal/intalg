@@ -1,0 +1,324 @@
+<!-- 
+Course: Intermediate Algebra
+Chapter: Radical Functions
+Section: Solving Radical Equations
+Author: Anurag Katyal, Spring 2025
+Contact: anurag@whyoverhow.com
+About the activity: Salty Pretzel covering types of radical equations from Section 9.1 -->
+
+<title>Radical Equations</title>
+
+<aside boxed>
+  <title>Instructions for Salty Pretzel</title>
+  <ul>
+    <li>Start anywhere and enter 1 in the box next to the first problem you choose to solve.</li>
+    <li>Search the activity for your answer. When you find it, enter 2 in that problem's box — it becomes problem 2. Continue until you return to your first problem, completing the loop.</li>
+    <li>Some problems are <em>distractors</em> — their answers do not appear anywhere in the activity. Mark an X in the box for any distractor you find. You must correctly identify all distractors to complete the activity.</li>
+    <li>If the first problem you solve is a distractor, pick a new problem and enter 1 in the box next to it.</li>
+    <li>There is only one correct path.</li>
+    <li>Happy solving!</li>
+  </ul>
+</aside>
+
+<section includeAutoNameIfNoTitle="false" includeAutoNumberIfNoTitle="false" boxed>
+  <title>Solving Radical Equations</title>
+  <p>To solve a radical equation, isolate the radical and raise both sides to the appropriate power. For <em>even</em>-index radicals (e.g., square roots), always check your answer(s) for extraneous solutions.</p>
+</section>
+
+<pretzel name="pretzel1" maxNumColumns="2">
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TYPE 1: sqrt(ax + b) = c   [square root, already isolated]
+       Design: pick answer n, RHS c, coefficient a.
+               Derive b = c² − a·n  so  sqrt(a·n + b) = sqrt(c²) = c ✓
+       Ranges: c ∈ {2,3,4}  →  c² ∈ {4,9,16}
+               n ∈ {1..5},  a ∈ {2..4}
+               b = c² − a·n  (may be negative; simplify handles sign in display)
+       Example: c=3, n=2, a=3  →  b=3  →  sqrt(3x+3)=3  →  x=2 ✓
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="c1" from="2" to="4"/>
+        <selectFromSequence name="n1" from="1" to="5"/>
+        <selectFromSequence name="a1" from="2" to="4"/>
+        <math name="b1" simplify>$c1^2 - $a1 * $n1</math>
+        <math name="radicand1" simplify>$a1 x + $b1</math>
+      </setup>
+      Solve for <m>x</m>:
+      <me>\sqrt{$radicand1} = $c1</me>
+    </statement>
+    <answer><m>x = $n1</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TYPE 2: sqrt(ax + b) − c = 0   [radical not isolated; add c first]
+       Same underlying math as Type 1; different first step for the student.
+       Design: pick answer n, constant c, coefficient a.
+               Derive b = c² − a·n  so isolating gives sqrt(radicand) = c ✓
+       Ranges: c ∈ {2,3,4},  n ∈ {1..5},  a ∈ {2..4}
+       Example: c=4, n=3, a=2  →  b=10  →  sqrt(2x+10)−4=0  →  x=3 ✓
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="c2" from="2" to="4"/>
+        <selectFromSequence name="n2" from="1" to="5"/>
+        <selectFromSequence name="a2" from="2" to="4"/>
+        <math name="b2" simplify>$c2^2 - $a2 * $n2</math>
+        <math name="radicand2" simplify>$a2 x + $b2</math>
+      </setup>
+      Solve for <m>x</m>:
+      <me>\sqrt{$radicand2} - $c2 = 0</me>
+    </statement>
+    <answer><m>x = $n2</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TYPE 3: cuberoot(ax + b) = c   [odd-index radical; c may be negative]
+       No extraneous solution check needed (odd index).
+       Design: pick |c| = c3mag ∈ {2,3}, sign c3sign ∈ {−1,+1}.
+               Derive c3 = c3sign · c3mag,  b3 = c3³ − a3·n3
+               so  cuberoot(a3·n3 + b3) = cuberoot(c3³) = c3 ✓
+       Ranges: c3 ∈ {−3,−2,2,3},  n3 ∈ {1..6},  a3 ∈ {1,2}
+       Example: c3=−2, n3=3, a3=1  →  b3=−11  →  cuberoot(x−11)=−2  →  x=3 ✓
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="c3mag" from="2" to="3"/>
+        <selectFromSequence name="c3sign" from="-1" to="1" step="2"/>
+        <math name="c3" simplify>$c3sign * $c3mag</math>
+        <selectFromSequence name="n3" from="1" to="6"/>
+        <selectFromSequence name="a3" from="1" to="2"/>
+        <math name="b3" simplify>$c3^3 - $a3 * $n3</math>
+        <math name="radicand3" simplify>$a3 x + $b3</math>
+      </setup>
+      Solve for <m>x</m>:
+      <me>\sqrt[3]{$radicand3} = $c3</me>
+    </statement>
+    <answer><m>x = $n3</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TYPE 4: x + sqrt(ax + b) = c   [variable on both sides; quadratic after squaring]
+       Key idea: isolate the radical first, then square → quadratic with
+       one valid and one extraneous solution. Student reports only the valid one.
+
+       Design: Pick solution n, shift k (so RHS−solution = k > 0 ensures a
+               positive radicand), coefficient a.
+               c = n + k  (so c − n = k > 0 when substituted; check passes)
+               b = k² − a·n  (so √(an+b) = √(k²) = k = c−n ✓)
+
+       After squaring √(ax+b) = c−x:
+         ax + b = c² − 2cx + x²
+         → x² − (2c+a)x + (c²−b) = 0
+         Roots: x = n  and  x = n+2k+a  (extraneous, since c−x < 0 there)
+
+       Ranges: n ∈ {1..5},  k ∈ {1,2},  a ∈ {1,2}
+       Example: n=2, k=2, a=1 → c=4, b=2 → x + √(x+2) = 4  →  x=2 ✓
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="n4" from="1" to="5"/>
+        <selectFromSequence name="k4" from="1" to="2"/>
+        <selectFromSequence name="a4" from="1" to="2"/>
+        <math name="c4" simplify>$n4 + $k4</math>
+        <math name="b4" simplify>$k4^2 - $a4 * $n4</math>
+        <math name="radicand4" simplify>$a4 x + $b4</math>
+      </setup>
+      Solve for <m>x</m>. Check for extraneous solutions.
+      <me>x + \sqrt{$radicand4} = $c4</me>
+    </statement>
+    <answer><m>x = $n4</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TYPE 5: sqrt(ax + b) − sqrt(cx + d) = 0   [two equal square roots]
+       Key idea: isolate one radical, square both sides → linear equation.
+       No quadratic; one solution. Must still check (even-index radical).
+
+       Design: Pick solution n, coefficients a > c (so the equation is non-trivial),
+               constant d.
+               Require equal radicands at x = n:  an + b = cn + d
+               → b = d − (a−c)·n
+
+       Both radicands at x = n equal cn + d > 0 (always, since c,n,d > 0) ✓
+
+       Ranges: a ∈ {3,4},  c ∈ {1,2}  (guarantees a > c always)
+               n ∈ {3..10},  d ∈ {2..6}
+       Example: a=3, c=1, d=4, n=5 → b=4−10=−6
+                √(3x−6) − √(x+4) = 0  →  x=5 ✓
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="a5" from="3" to="4"/>
+        <selectFromSequence name="c5" from="1" to="2"/>
+        <selectFromSequence name="n5" from="3" to="10"/>
+        <selectFromSequence name="d5" from="2" to="6"/>
+        <math name="b5" simplify>$d5 - ($a5 - $c5) * $n5</math>
+        <math name="leftRad5" simplify>$a5 x + $b5</math>
+        <math name="rightRad5" simplify>$c5 x + $d5</math>
+      </setup>
+      Solve for <m>x</m>:
+      <me>\sqrt{$leftRad5} - \sqrt{$rightRad5} = 0</me>
+    </statement>
+    <answer><m>x = $n5</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TYPE 6: sqrt(ax + b) − sqrt(cx + d) = 1   [two square roots, k=+1; requires squaring twice]
+       Key idea: isolate one radical, square → still has a radical, isolate again, square.
+       One valid solution; the second quadratic root is extraneous.
+
+       Design: Fix s=3 (value of RIGHT radical at solution), a=2, c=1, k=1.
+               RIGHT radicand at x=n6: n6 + d6 = s² = 9  →  d6 = 9 − n6
+               LEFT radicand at x=n6:  2·n6 + b6 = (s+1)² = 16  →  b6 = 16 − 2·n6
+
+       Verification at x=n6: √(2n6+b6) − √(n6+d6) = √16 − √9 = 4 − 3 = 1 ✓
+       Need d6 > 0: n6 < 9. Need b6 > 0: n6 < 8.
+
+       After isolating and squaring twice (n6=5 example):
+         √(2x+6) = 1 + √(x+4)  →  x−3 = 2√(x+4)  →  x²−10x−15=0
+         Roots: x=5 ✓,  x=−1 (extraneous, since x−3 < 0 there)
+
+       Ranges: n6 ∈ {3..7}  (ensures b6 ≥ 2 > 0, d6 ≥ 2 > 0)
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="n6" from="3" to="7"/>
+        <math name="b6" simplify>16 - 2*$n6</math>
+        <math name="d6" simplify>9 - $n6</math>
+        <math name="leftRad6" simplify>2 x + $b6</math>
+        <math name="rightRad6" simplify>x + $d6</math>
+      </setup>
+      Solve for <m>x</m>. Check for extraneous solutions.
+      <me>\sqrt{$leftRad6} - \sqrt{$rightRad6} = 1</me>
+    </statement>
+    <answer><m>x = $n6</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TYPE 7: sqrt(ax + b) − sqrt(cx + d) = −1   [two square roots, k=−1; requires squaring twice]
+       Same algebra as Type 6 but the RHS is negative, so the larger radical is on the right.
+       Rearrange to: sqrt(cx+d) − sqrt(ax+b) = 1, then square twice.
+       Solution is always negative (see design below).
+
+       Design: Fix t=0 (LEFT radical = 0 at solution), c=1, k=−1.
+               LEFT radicand at x=n7: a7·n7 + b7 = t² = 0  →  b7 = −a7·n7  (> 0 since n7 < 0)
+               RIGHT radicand at x=n7: n7 + d7 = (t+1)² = 1  →  d7 = 1 − n7  (> 0 since n7 < 0)
+
+       Verification at x=n7: √(a7·n7+b7) − √(n7+d7) = √0 − √1 = −1 ✓
+       Example: n7=−3, a7=3, c=1 → b7=9, d7=4 → √(3x+9) − √(x+4) = −1, x=−3 ✓
+
+       After isolating and squaring twice (n7=−2, a7=2 example):
+         √(2x+4) = √(x+3) − 1  →  x = −2√(x+3)  →  x²−4x−12=0
+         Roots: x=−2 ✓,  x=6 (extraneous, since x < 0 required by isolation step)
+
+       Ranges: n7 ∈ {−5..−1},  a7 ∈ {2,3}
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem>
+    <statement>
+      <setup>
+        <selectFromSequence name="n7" from="-5" to="-1"/>
+        <selectFromSequence name="a7" from="2" to="3"/>
+        <math name="b7" simplify>-$a7 * $n7</math>
+        <math name="d7" simplify>1 - $n7</math>
+        <math name="leftRad7" simplify>$a7 x + $b7</math>
+        <math name="rightRad7" simplify>x + $d7</math>
+      </setup>
+      Solve for <m>x</m>. Check for extraneous solutions.
+      <me>\sqrt{$leftRad7} - \sqrt{$rightRad7} = -1</me>
+    </statement>
+    <answer><m>x = $n7</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       DISTRACTOR 1: sqrt(3x + 7) = −4   [even root = negative → No Solution]
+       A square root is always ≥ 0, so it can NEVER equal −4.
+       This is the "Type 3 even-root" scenario from the book (Example 444).
+
+       Why x = 20 is safe as the displayed answer:
+         All chain answers n ∈ {−5…−1, 1…10}; 20 is outside every range.
+         At x = 20 in any chain statement, radicands involve
+         (c² − a·(n+20)) which is negative or large — 20 cannot satisfy any
+         statement whose valid solution is in {−5…10}.
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem isDistractor>
+    <statement>
+      Solve for <m>x</m>:
+      <me>\sqrt{3x + 7} = -4</me>
+    </statement>
+    <answer><m>x = 20</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       DISTRACTOR 2: sqrt(2x + 6) − sqrt(x + 4) = −3   [No Solution]
+       Domain: x ≥ −3 (from both radicands).
+       At x = −3 (left boundary): √0 − √1 = −1.
+       As x → ∞: LHS ≈ √(2x) − √x = √x(√2 − 1) → +∞.
+       So LHS is increasing on the domain with minimum value −1.
+       Since −1 > −3, the equation LHS = −3 has NO solution.
+
+       Why x = −8 is safe as the displayed answer:
+         x = −8 is outside domain of this statement (need x ≥ −3).
+         x = −8 yields negative radicands in all chain statements (verified:
+         every chain type has its radicand < 0 at x = −8 given parameter ranges).
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem isDistractor>
+    <statement>
+      Solve for <m>x</m>. Check for extraneous solutions.
+      <me>\sqrt{2x + 6} - \sqrt{x + 4} = -3</me>
+    </statement>
+    <answer><m>x = -8</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       DISTRACTOR 3: sqrt(3x + 4) = −5   [square root = negative → No Solution]
+       A square root is always ≥ 0; it cannot equal −5.
+       Displayed answer x = 11: outside chain range {−5…10}; at x = 11
+       every chain radicand is still well-defined but 11 solves none of them.
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem isDistractor>
+    <statement>
+      Solve for <m>x</m>:
+      <me>\sqrt{3x + 4} = -5</me>
+    </statement>
+    <answer><m>x = 11</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       DISTRACTOR 4: sqrt(x + 7) + sqrt(x − 2) = 0   [sum of square roots = 0 → No Solution]
+       Domain: x ≥ 2 (need x − 2 ≥ 0).
+       On the domain, √(x + 7) ≥ √9 = 3 > 0, so the sum ≥ 3 > 0 always.
+       The equation has no solution.
+       Displayed answer x = −7: outside chain range {−5…10}; also outside
+       the domain of this statement (need x ≥ 2), so it cannot satisfy it.
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem isDistractor>
+    <statement>
+      Solve for <m>x</m>:
+      <me>\sqrt{x + 7} + \sqrt{x - 2} = 0</me>
+    </statement>
+    <answer><m>x = -7</m></answer>
+  </problem>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       DISTRACTOR 5: ⁴√(2x + 6) = −1   [fourth root = negative → No Solution]
+       An even-index radical is always ≥ 0; ⁴√(…) cannot equal −1.
+       (Mirrors the book's Example 444 with a fourth root.)
+       Displayed answer x = 15: outside chain range {−5…10}; at x = 15
+       no chain statement has 15 as a valid solution.
+       ═══════════════════════════════════════════════════════════════ -->
+  <problem isDistractor>
+    <statement>
+      Solve for <m>x</m>:
+      <me>\sqrt[4]{2x + 6} = -1</me>
+    </statement>
+    <answer><m>x = 15</m></answer>
+  </problem>
+
+</pretzel>
