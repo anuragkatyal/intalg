@@ -33,7 +33,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
   <selectFromSequence name="solution3" from="1" to="6" exclude="$solution1 $solution2 $solution4"/>
   <selectFromSequence name="solution6" from="3" to="7" exclude="$solution1 $solution2 $solution3 $solution4"/>
   <selectFromSequence name="solution5" from="3" to="10" exclude="$solution1 $solution2 $solution3 $solution4 $solution6"/>
-  <selectFromSequence name="solution7" from="-5" to="-1"/>
+  <selectFromSequence name="solution7" from="-13" to="-9"/>
 </setup>
 
 <pretzel name="pretzel1" maxNumColumns="2">
@@ -126,15 +126,18 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
          → x² − (2c+a)x + (c²−b) = 0
          Roots: x = n  and  x = n+2k+a  (extraneous, since c−x < 0 there)
 
-       Ranges: n ∈ {1..5},  k ∈ {1,2},  a ∈ {1,2}
-       Example: n=2, k=2, a=1 → c=4, b=2 → x + √(x+2) = 4  →  x=2 ✓
+       To keep the unchecked extra root away from every displayed answer in the
+       pretzel, use larger values of k and a so n+2k+a is always above 20.
+
+       Ranges: n ∈ {1..5},  k ∈ {8,9},  a ∈ {4,5}
+       Example: n=2, k=8, a=4 → c=10, b=56 → x + √(4x+56) = 10  →  x=2 ✓
        ═══════════════════════════════════════════════════════════════ -->
   <problem>
     <statement>
       <setup>
         <math name="n4" extend="$solution4"/>
-        <selectFromSequence name="k4" from="1" to="2"/>
-        <selectFromSequence name="a4" from="1" to="2"/>
+        <selectFromSequence name="k4" from="8" to="9"/>
+        <selectFromSequence name="a4" from="4" to="5"/>
         <math name="c4" simplify>$n4 + $k4</math>
         <math name="b4" simplify>$k4^2 - $a4 * $n4</math>
         <math name="radicand4" simplify>$a4 x + $b4</math>
@@ -223,13 +226,16 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
                RIGHT radicand at x=n7: n7 + d7 = (t+1)² = 1  →  d7 = 1 − n7  (> 0 since n7 < 0)
 
        Verification at x=n7: √(a7·n7+b7) − √(n7+d7) = √0 − √1 = −1 ✓
-       Example: n7=−3, a7=3, c=1 → b7=9, d7=4 → √(3x+9) − √(x+4) = −1, x=−3 ✓
+      Example: n7=−10, a7=2 → b7=20, d7=11 → √(2x+20) − √(x+11) = −1, x=−10 ✓
 
        After isolating and squaring twice (n7=−2, a7=2 example):
          √(2x+4) = √(x+3) − 1  →  x = −2√(x+3)  →  x²−4x−12=0
          Roots: x=−2 ✓,  x=6 (extraneous, since x < 0 required by isolation step)
 
-       Ranges: n7 ∈ {−5..−1},  a7 ∈ {2,3}
+      Shift the valid negative-answer range lower so the unchecked extra root
+      from Type 6, which is always in {−5..−1}, can never match Type 7.
+
+      Ranges: n7 ∈ {−13..−9},  a7 ∈ {2,3}
        ═══════════════════════════════════════════════════════════════ -->
   <problem>
     <statement>
@@ -253,10 +259,10 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
        This is the "Type 3 even-root" scenario from the book (Example 444).
 
        Why x = 20 is safe as the displayed answer:
-         All chain answers n ∈ {−5…−1, 1…10}; 20 is outside every range.
+         All chain answers n ∈ {−13…−9, 1…10}; 20 is outside every range.
          At x = 20 in any chain statement, radicands involve
          (c² − a·(n+20)) which is negative or large — 20 cannot satisfy any
-         statement whose valid solution is in {−5…10}.
+         statement whose valid solution is in {−13…−9, 1…10}.
        ═══════════════════════════════════════════════════════════════ -->
   <problem isDistractor>
     <statement>
@@ -290,7 +296,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
   <!-- ═══════════════════════════════════════════════════════════════
        DISTRACTOR 3: sqrt(3x + 4) = −5   [square root = negative → No Solution]
        A square root is always ≥ 0; it cannot equal −5.
-       Displayed answer x = 11: outside chain range {−5…10}; at x = 11
+      Displayed answer x = 11: outside chain range {−13…−9, 1…10}; at x = 11
        every chain radicand is still well-defined but 11 solves none of them.
        ═══════════════════════════════════════════════════════════════ -->
   <problem isDistractor>
@@ -306,7 +312,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
        Domain: x ≥ 2 (need x − 2 ≥ 0).
        On the domain, √(x + 7) ≥ √9 = 3 > 0, so the sum ≥ 3 > 0 always.
        The equation has no solution.
-       Displayed answer x = −7: outside chain range {−5…10}; also outside
+      Displayed answer x = −7: outside chain range {−13…−9, 1…10}; also outside
        the domain of this statement (need x ≥ 2), so it cannot satisfy it.
        ═══════════════════════════════════════════════════════════════ -->
   <problem isDistractor>
@@ -321,7 +327,7 @@ About the activity: Salty Pretzel covering types of radical equations from Secti
        DISTRACTOR 5: ⁴√(2x + 6) = −1   [fourth root = negative → No Solution]
        An even-index radical is always ≥ 0; ⁴√(…) cannot equal −1.
        (Mirrors the book's Example 444 with a fourth root.)
-       Displayed answer x = 15: outside chain range {−5…10}; at x = 15
+      Displayed answer x = 15: outside chain range {−13…−9, 1…10}; at x = 15
        no chain statement has 15 as a valid solution.
        ═══════════════════════════════════════════════════════════════ -->
   <problem isDistractor>

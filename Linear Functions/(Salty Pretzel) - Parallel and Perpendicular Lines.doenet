@@ -43,34 +43,41 @@
 <!-- 2 -->
 <problem>
   <statement>
+    <setup>
+      <math name="regularY2" simplify>$yv[2]+800</math>
+    </setup>
     Write the equation of the line perpendicular to 
-    <m>y=$m[1]x+3</m> through <m>($xv[2],$yv[2])</m> in point-slope form.
+    <m>y=$m[1]x+3</m> through <m>($xv[2],$regularY2)</m> in point-slope form.
 
-    <!-- <math simplify="numberspreserveorder">y-$yv[2]=$negRecip1(x-$xv[2])</math> -->
+    <!-- <math simplify="numberspreserveorder">y-$regularY2=$negRecip1(x-$xv[2])</math> -->
     
   </statement>
   <answer>
-    <math simplify="numberspreserveorder">y-$yv[2]=$negRecip1(x-$xv[2])</math>
+    <math simplify="numberspreserveorder">y-$regularY2=$negRecip1(x-$xv[2])</math>
   </answer>
 </problem>
 
 <!-- 3 GRAPH -->
 <problem>
   <statement>
+    <setup>
+      <math name="graphY1" simplify>$yv[1]+200</math>
+      <math name="graphY2" simplify>$yv[2]+200</math>
+    </setup>
     Find the slope-intercept form of the line shown.
     <graph size="small" grid>
-      <line through="($xv[1],$yv[1]) ($xv[2],$yv[2])"/>
+      <line through="($xv[1],$graphY1) ($xv[2],$graphY2)"/>
     </graph>
 
     <!-- <math simplify="numberspreserveorder">
-      y=(($yv[2]-$yv[1])/($xv[2]-$xv[1]))x+
-      ($yv[1]-(($yv[2]-$yv[1])/($xv[2]-$xv[1]))*$xv[1])
+      y=(($graphY2-$graphY1)/($xv[2]-$xv[1]))x+
+      ($graphY1-(($graphY2-$graphY1)/($xv[2]-$xv[1]))*$xv[1])
     </math> -->
   </statement>
   <answer>
     <math simplify="numberspreserveorder">
-      y=(($yv[2]-$yv[1])/($xv[2]-$xv[1]))x+
-      ($yv[1]-(($yv[2]-$yv[1])/($xv[2]-$xv[1]))*$xv[1])
+      y=(($graphY2-$graphY1)/($xv[2]-$xv[1]))x+
+      ($graphY1-(($graphY2-$graphY1)/($xv[2]-$xv[1]))*$xv[1])
     </math>
   </answer>
 </problem>
@@ -78,16 +85,19 @@
 <!-- 4 -->
 <problem>
   <statement>
+    <setup>
+      <math name="regularY4" simplify>$yv[3]+1000</math>
+    </setup>
     Write the standard form of the line perpendicular to 
-    <m>y=$m[2]x-1</m> through <m>($xv[3],$yv[3])</m>.
+    <m>y=$m[2]x-1</m> through <m>($xv[3],$regularY4)</m>.
 
     <!-- <math simplify="numberspreserveorder">
-            ($negRecip2)x - y =-($yv[3]-$negRecip2*$xv[3])
+            ($negRecip2)x - y =-($regularY4-$negRecip2*$xv[3])
     </math> -->
   </statement>
   <answer>
     <math simplify="numberspreserveorder">
-      ($negRecip2)x - y =-($yv[3]-$negRecip2*$xv[3])
+      ($negRecip2)x - y =-($regularY4-$negRecip2*$xv[3])
     </math>
   </answer>
 </problem>
@@ -108,20 +118,24 @@
 <!-- 6 GRAPH -->
 <problem>
   <statement>
+    <setup>
+      <math name="graphY3" simplify>$yv[3]+400</math>
+      <math name="graphY5" simplify>$yv[5]+400</math>
+    </setup>
     Find an equation of the line shown in point-slope form.
     <graph size="small" grid>
-      <line through="($xv[3],$yv[3]) ($xv[5],$yv[5])"/>
-      <point><label>($xv[3],$yv[3])</label>($xv[3],$yv[3])</point>
+      <line through="($xv[3],$graphY3) ($xv[5],$graphY5)"/>
+      <point><label>($xv[3],$graphY3)</label>($xv[3],$graphY3)</point>
     </graph>
 
     <!-- <math simplify="numberspreserveorder">
-      y-$yv[3]=(($yv[5]-$yv[3])/($xv[5]-$xv[3]))(x-$xv[3])
+      y-$graphY3=(($graphY5-$graphY3)/($xv[5]-$xv[3]))(x-$xv[3])
     </math> -->
 
   </statement>
   <answer>
     <math simplify="numberspreserveorder">
-      y-$yv[3]=(($yv[5]-$yv[3])/($xv[5]-$xv[3]))(x-$xv[3])
+      y-$graphY3=(($graphY5-$graphY3)/($xv[5]-$xv[3]))(x-$xv[3])
     </math>
   </answer>
 </problem>
@@ -129,17 +143,20 @@
 <!-- 7 -->
 <problem>
   <statement>
+    <setup>
+      <math name="regularY7" simplify>$yv[5]+1200</math>
+    </setup>
     Write the slope-intercept form of the line perpendicular to 
-    <m>$m[4]x+y=2</m> through <m>($xv[5],$yv[5])</m>.
+    <m>$m[4]x+y=2</m> through <m>($xv[5],$regularY7)</m>.
 
     <!-- <math simplify="numberspreserveorder">
-      y=(1/$m[4])x+($yv[5]-(1/$m[4])*$xv[5])
+      y=(1/$m[4])x+($regularY7-(1/$m[4])*$xv[5])
     </math> -->
     
   </statement>
   <answer>
     <math simplify="numberspreserveorder">
-      y=(1/$m[4])x+($yv[5]-(1/$m[4])*$xv[5])
+      y=(1/$m[4])x+($regularY7-(1/$m[4])*$xv[5])
     </math>
   </answer>
 </problem>
@@ -178,15 +195,18 @@
 <!-- 10 -->
 <problem>
   <statement>
-    Write a perpendicular line to <m>y=$m[7]x</m> passing through <m>($xv[2],$yv[2])</m>.
+    <setup>
+      <math name="regularY10" simplify>$yv[2]+1400</math>
+    </setup>
+    Write a perpendicular line to <m>y=$m[7]x</m> passing through <m>($xv[2],$regularY10)</m>.
 
     <!-- <math simplify="numberspreserveorder">
-      y=(-1/$m[7])x+($yv[2]+(1/$m[7])*$xv[2])
+      y=(-1/$m[7])x+($regularY10+(1/$m[7])*$xv[2])
     </math> -->
   </statement>
   <answer>
     <math simplify="numberspreserveorder">
-      y=(-1/$m[7])x+($yv[2]+(1/$m[7])*$xv[2])
+      y=(-1/$m[7])x+($regularY10+(1/$m[7])*$xv[2])
     </math>
   </answer>
 </problem>
@@ -198,66 +218,72 @@
 <!-- 11 wrong slope (parallel instead of perpendicular) -->
 <problem isDistractor>
   <statement>
-    Write the equation of a line perpendicular to <m>y=$m[1]x</m> through <m>($xv[1],$yv[1])</m> in slope intercept form.
+    Write the equation of a line perpendicular to <m>y=$m[1]x</m> through <m>(0,2000)</m> in slope intercept form.
 
-    <!-- <math simplify="numberspreserveorder">y=$m[1]x+($yv[1]-$m[1]*$xv[1])</math> -->
+    <!-- <math simplify="numberspreserveorder">y=$m[1]x+2000</math> -->
   </statement>
   <answer>
-    <math simplify="numberspreserveorder">y=$m[1]x+($yv[1]-$m[1]*$xv[1])</math>
+    <math simplify="numberspreserveorder">y=$m[1]x+2000</math>
   </answer>
 </problem>
 
 <!-- 12 forgot negative reciprocal -->
 <problem isDistractor>
   <statement>
-    Write the equation of a line perpendicular to <m>y=$m[2]x</m> through <m>($xv[2],$yv[2])</m> in slope intercept form.
+    Write the equation of a line perpendicular to <m>y=$m[2]x</m> through <m>(0,2200)</m> in slope intercept form.
 
-    <!-- <math simplify="numberspreserveorder">y=(1/$m[2])x+($yv[2]-(1/$m[2])*$xv[2])</math> -->
+    <!-- <math simplify="numberspreserveorder">y=(1/$m[2])x+2200</math> -->
   </statement>
   <answer>
-    <math simplify="numberspreserveorder">y=(1/$m[2])x+($yv[2]-(1/$m[2])*$xv[2])</math>
+    <math simplify="numberspreserveorder">y=(1/$m[2])x+2200</math>
   </answer>
 </problem>
 
 <!-- 13 sign error -->
 <problem isDistractor>
   <statement>
-    Write the equation of a line parallel to <m>y=$m[3]x+1</m> through <m>($xv[3],$yv[3])</m> in slope intercept form.
+    Write the equation of a line parallel to <m>y=$m[3]x+1</m> through <m>(1,2400)</m> in slope intercept form.
 
-    <!-- <math simplify="numberspreserveorder">y=$m[3]x+($yv[3]+$m[3]*$xv[3])</math> -->
+    <!-- <math simplify="numberspreserveorder">y=$m[3]x+(2400+$m[3])</math> -->
   </statement>
   <answer>
-    <math simplify="numberspreserveorder">y=$m[3]x+($yv[3]+$m[3]*$xv[3])</math>
+    <math simplify="numberspreserveorder">y=$m[3]x+(2400+$m[3])</math>
   </answer>
 </problem>
 
 <!-- 14 swapped coordinates -->
 <problem isDistractor>
   <statement>
-    Write the equation of a line through <m>($xv[4],$yv[4])</m> with slope <m>$m[4]</m> in point slope form.
+    Write the equation of a line through <m>(0,2600)</m> with slope <m>$m[4]</m> in point slope form.
 
     
   </statement>
   <answer>
-    <math simplify="numberspreserveorder">y-$xv[4]=$m[4](x-$yv[4])</math>
+    <math simplify="numberspreserveorder">y-2800=$m[4](x-0)</math>
   </answer>
 </problem>
 
 <!-- 15 graph slope flipped -->
 <problem isDistractor>
   <statement>
+    <setup>
+      <math name="distractorX15a" simplify>$xv[5]</math>
+      <math name="distractorY15a" simplify>$yv[5]+3000</math>
+      <math name="distractorX15b" simplify>$xv[6]</math>
+      <math name="distractorY15b" simplify>$yv[6]+3000</math>
+    </setup>
     Find the equation of the graphed line in slope intercept form.
     <graph size="small" grid>
-      <line through="($xv[5],$yv[5]) ($xv[6],$yv[6])"/>
+      <line through="($distractorX15a,$distractorY15a) ($distractorX15b,$distractorY15b)"/>
 
       <!-- <math simplify="numberspreserveorder">
-      y=(($xv[6]-$xv[5])/($yv[6]-$yv[5]))x
+      y=(($xv[6]-$xv[5])/($yv[6]-$yv[5]))x+3200
     </math> -->
     </graph>
   </statement>
   <answer>
     <math simplify="numberspreserveorder">
-      y=(($xv[6]-$xv[5])/($yv[6]-$yv[5]))x
+      y=(($xv[6]-$xv[5])/($yv[6]-$yv[5]))x+3200
     </math>
   </answer>
 </problem>
@@ -265,12 +291,12 @@
 <!-- 16 dropped negative -->
 <problem isDistractor>
   <statement>
-    Write the equation of the line perpendicular to <m>y=$m[6]x</m> in slope intercept form.
+    Write the equation of the line perpendicular to <m>y=$m[6]x</m> passing through <m>(0,3400)</m> in slope intercept form.
 
-    <!-- <math simplify="numberspreserveorder">y=(1/$m[6])x</math> -->
+    <!-- <math simplify="numberspreserveorder">y=(1/$m[6])x+3400</math> -->
   </statement>
   <answer>
-    <math simplify="numberspreserveorder">y=(1/$m[6])x</math>
+    <math simplify="numberspreserveorder">y=(1/$m[6])x+3400</math>
   </answer>
 </problem>
 

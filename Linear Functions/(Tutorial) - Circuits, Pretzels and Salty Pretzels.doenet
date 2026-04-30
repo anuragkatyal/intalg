@@ -250,7 +250,7 @@
         Solve <m>x + $a[5] = $b5</m>
       </statement>
       <answer>
-        <m>x=<math simplify>$finalAns[5]+10</math></m>
+        <m>x=<math simplify>$finalAns[5]+20</math></m>
       </answer>
     </problem>
   
@@ -260,7 +260,7 @@
         Solve <m>x - $a[6] = $b6</m>
       </statement>
       <answer>
-        <m>x=<math simplify>$finalAns[6]+15</math></m>
+        <m>x=<math simplify>$finalAns[6]+40</math></m>
       </answer>
     </problem>
     

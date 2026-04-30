@@ -1,0 +1,318 @@
+<title>Complex Numbers</title>
+
+<aside boxed>
+	<title>Instructions for Salty Pretzel</title>
+	<ul>
+		<li>Start anywhere and enter 1 in the box next to the first problem you choose to solve.</li>
+		<li>Find your answer somewhere else in the activity and label that box 2. Continue until you return to your starting problem.</li>
+		<li>Some problems are <em>distractors</em>. Their answers do not lead anywhere. Mark these with an X.</li>
+		<li>If you start on a distractor, choose a different problem and begin again.</li>
+		<li>There is exactly one correct loop.</li>
+	</ul>
+</aside>
+
+<section boxed>
+	<title>Complex Number Review</title>
+	<p>Simplify each expression. Write answers in standard form <m>a+bi</m> whenever possible, and remember that powers of <m>i</m> repeat every 4 steps.</p>
+</section>
+
+<setup>
+	<selectFromSequence name="powCycle" from="2" to="12" numToSelect="4"/>
+	<math name="exp1" simplify>4*$powCycle[1]</math>
+	<math name="exp2" simplify>4*$powCycle[2]+1</math>
+	<math name="exp3" simplify>4*$powCycle[3]+2</math>
+	<math name="exp4" simplify>4*$powCycle[4]+3</math>
+
+	<selectFromSequence name="sum1Real" from="-16" to="-11"/>
+	<selectFromSequence name="sum1Imag" from="2" to="6"/>
+	<selectFromSequence name="sum1A" from="-9" to="-3"/>
+	<math name="sum1B" simplify>$sum1Real-$sum1A</math>
+
+	<selectFromSequence name="sum2Real" from="-9" to="-4"/>
+	<selectFromSequence name="sum2Imag" from="8" to="12"/>
+	<selectFromSequence name="sum2A" from="2" to="6"/>
+	<selectFromSequence name="sum2B" from="2" to="5"/>
+	<math name="sum2C" simplify>$sum2Real-$sum2A</math>
+	<math name="sum2D" simplify>$sum2Imag-$sum2B</math>
+
+	<selectFromSequence name="sumDReal" from="18" to="24"/>
+	<selectFromSequence name="sumDImag" from="3" to="7"/>
+	<selectFromSequence name="sumDA" from="5" to="11"/>
+	<math name="sumDB" simplify>$sumDReal-$sumDA</math>
+
+	<selectFromSequence name="diff1Real" from="3" to="8"/>
+	<selectFromSequence name="diff1ImagMag" from="2" to="6"/>
+	<selectFromSequence name="diff1A" from="10" to="16"/>
+	<math name="diff1B" simplify>$diff1A-$diff1Real</math>
+
+	<selectFromSequence name="diff2Real" from="10" to="15"/>
+	<selectFromSequence name="diff2ImagMag" from="7" to="11"/>
+	<selectFromSequence name="diff2A" from="18" to="24"/>
+	<selectFromSequence name="diff2B" from="1" to="4"/>
+	<math name="diff2C" simplify>$diff2A-$diff2Real</math>
+	<math name="diff2D" simplify>$diff2B+$diff2ImagMag</math>
+
+	<selectFromSequence name="diffDRealMag" from="18" to="24"/>
+	<selectFromSequence name="diffDImagMag" from="3" to="7"/>
+	<selectFromSequence name="diffDA" from="4" to="10"/>
+	<math name="diffDB" simplify>$diffDA+$diffDRealMag</math>
+
+	<selectFromSequence name="prod1Factor" from="4" to="6"/>
+	<selectFromSequence name="prod1RealInside" from="4" to="6"/>
+	<selectFromSequence name="prod1ImagInside" from="5" to="7"/>
+	<math name="prod1Real" simplify>$prod1Factor*$prod1RealInside</math>
+	<math name="prod1Imag" simplify>$prod1Factor*$prod1ImagInside</math>
+
+	<selectFromSequence name="prod2U" from="10" to="14"/>
+	<selectFromSequence name="prod2V" from="1" to="3"/>
+	<math name="prod2Real" simplify>$prod2U-$prod2V</math>
+	<math name="prod2Imag" simplify>$prod2U+$prod2V</math>
+
+	<selectFromSequence name="prod3HalfReal" from="-12" to="-8"/>
+	<selectFromSequence name="prod3HalfImag" from="7" to="10"/>
+	<math name="prod3Real" simplify>2*$prod3HalfReal</math>
+	<math name="prod3Imag" simplify>2*$prod3HalfImag</math>
+
+	<selectFromSequence name="pow2A" from="2" to="4"/>
+	<selectFromSequence name="pow2BAbs" from="5" to="7"/>
+	<math name="pow2Real" simplify>$pow2A^2-$pow2BAbs^2</math>
+	<math name="pow2Imag" simplify>-2*$pow2A*$pow2BAbs</math>
+
+	<selectFromSequence name="pow3A" from="3" to="4"/>
+	<selectFromSequence name="pow3B" from="3" to="4"/>
+	<math name="pow3Real" simplify>$pow3A^3-3*$pow3A*$pow3B^2</math>
+	<math name="pow3Imag" simplify>3*$pow3A^2*$pow3B-$pow3B^3</math>
+
+	<selectFromSequence name="q1B" from="2" to="6"/>
+	<selectFromSequence name="q1K" from="2" to="6"/>
+	<math name="q1A" simplify>$q1B*$q1K</math>
+
+	<selectFromSequence name="q2B" from="5" to="7"/>
+	<selectFromSequence name="q2C" from="6" to="8"/>
+	<selectFromSequence name="q2K" from="2" to="3"/>
+	<math name="q2A" simplify>$q2K*($q2B^2+$q2C^2)</math>
+	<math name="q2Real" simplify>$q2K*$q2B</math>
+	<math name="q2ImagMag" simplify>$q2K*$q2C</math>
+
+	<selectFromSequence name="q3RealMag" from="5" to="8"/>
+	<selectFromSequence name="q3Imag" from="18" to="24"/>
+	<math name="q3Real" simplify>-$q3RealMag</math>
+	<math name="q3NumReal" simplify>$q3Real-$q3Imag</math>
+	<math name="q3NumImag" simplify>$q3Real+$q3Imag</math>
+
+	<selectFromSequence name="q4Real" from="22" to="28"/>
+	<selectFromSequence name="q4ImagMag" from="13" to="19"/>
+	<selectFromSequence name="q4C" from="2" to="4"/>
+	<math name="q4NumReal" simplify>$q4C*$q4ImagMag</math>
+	<math name="q4NumImag" simplify>$q4C*$q4Real</math>
+
+	<selectFromSequence name="distProdFactor" from="3" to="5"/>
+	<selectFromSequence name="distProdRealInside" from="7" to="9"/>
+	<selectFromSequence name="distProdImagInside" from="2" to="3"/>
+	<math name="distProdReal" simplify>$distProdFactor*$distProdRealInside</math>
+	<math name="distProdImag" simplify>$distProdFactor*$distProdImagInside</math>
+</setup>
+
+<pretzel name="pretzel1" maxNumColumns="2">
+
+	<!-- problem 1 -->
+	<problem>
+		<statement>
+			Simplify <m>i^{$exp1}</m>.
+		</statement>
+		<answer>
+			<m>1</m>
+		</answer>
+	</problem>
+
+	<!-- problem 2 -->
+	<problem>
+		<statement>
+			Simplify <m>i^{$exp2}</m>.
+		</statement>
+		<answer>
+			<m>i</m>
+		</answer>
+	</problem>
+
+	<!-- problem 3 -->
+	<problem>
+		<statement>
+			Simplify <m>i^{$exp3}</m>.
+		</statement>
+		<answer>
+			<m>-1</m>
+		</answer>
+	</problem>
+
+	<!-- problem 4 -->
+	<problem>
+		<statement>
+			Simplify <m>i^{$exp4}</m>.
+		</statement>
+		<answer>
+			<m>-i</m>
+		</answer>
+	</problem>
+
+	<!-- problem 5 -->
+	<problem>
+		<statement>
+			Simplify <m>$sum1A+($sum1B+$sum1Imag i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$sum1Real+$sum1Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 6 -->
+	<problem>
+		<statement>
+			Simplify <m>($sum2A+$sum2B i)+($sum2C+$sum2D i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$sum2Real+$sum2Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 7 -->
+	<problem isDistractor>
+		<statement>
+			Simplify <m>$sumDA+($sumDB+$sumDImag i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$sumDReal+50+$sumDImag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 8 -->
+	<problem>
+		<statement>
+			Simplify <m>$diff1A-($diff1B+$diff1ImagMag i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$diff1Real-$diff1ImagMag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 9 -->
+	<problem>
+		<statement>
+			Simplify <m>($diff2A+$diff2B i)-($diff2C+$diff2D i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$diff2Real-$diff2ImagMag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 10 -->
+	<problem isDistractor>
+		<statement>
+			Simplify <m>$diffDA-($diffDB+$diffDImagMag i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">-$diffDRealMag-($diffDImagMag+60)i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 11 -->
+	<problem>
+		<statement>
+			Simplify <m>$prod1Factor($prod1RealInside+$prod1ImagInside i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$prod1Real+$prod1Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 12 -->
+	<problem>
+		<statement>
+			Simplify <m>(1+i)($prod2U+$prod2V i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$prod2Real+$prod2Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 13 -->
+	<problem>
+		<statement>
+			Simplify <m>(1+i)(1-i)($prod3HalfReal+$prod3HalfImag i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$prod3Real+$prod3Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 14 -->
+	<problem>
+		<statement>
+			Simplify <m>($pow2A-$pow2BAbs i)^2</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$pow2Real+$pow2Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 15 -->
+	<problem>
+		<statement>
+			Simplify <m>($pow3A+$pow3B i)^3</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$pow3Real+$pow3Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 16 -->
+	<problem>
+		<statement>
+			Simplify <m>\frac{$q1A}{$q1B i}</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">-$q1K i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 17 -->
+	<problem>
+		<statement>
+			Simplify <m>\frac{$q2A}{$q2B+$q2C i}</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$q2Real-$q2ImagMag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 18 -->
+	<problem>
+		<statement>
+			Simplify <m>\frac{$q3NumReal+$q3NumImag i}{1+i}</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$q3Real+$q3Imag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 19 -->
+	<problem>
+		<statement>
+			Simplify <m>\frac{$q4NumReal+$q4NumImag i}{$q4C i}</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$q4Real-$q4ImagMag i</math>
+		</answer>
+	</problem>
+
+	<!-- problem 20 -->
+	<problem isDistractor>
+		<statement>
+			Simplify <m>$distProdFactor($distProdRealInside+$distProdImagInside i)</m>.
+		</statement>
+		<answer>
+			<math simplify="numbersPreserveOrder">$distProdReal+80+($distProdImag+40)i</math>
+		</answer>
+	</problem>
+
+</pretzel>
